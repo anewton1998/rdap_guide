@@ -10,7 +10,7 @@
         - [Media Types](protocol/media_types.md)
         - [Query Parameters](protocol/query_parameters.md)
         - [URL Paths](protocol/url_paths.md)
-    - [JSON](protocol/json.md)
+    - [The JSON Data Model](protocol/json.md)
     - [jCard and vCard](protocol/jcard_and_vcard.md)
 - [Finding Servers](bootstrapping/README.md)
     - [The IANA Files](bootstrapping/iana.md)

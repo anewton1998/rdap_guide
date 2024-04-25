@@ -1,15 +1,25 @@
 # Introduction
 
-The Registry Data Access Protocol (RDAP) is the successor protocol to the Whois protocol. It was first ratified by the Internet Engineering Task Force (IETF) in March 2015 by
-their Web Extensible Internet Registration Data Service (WEIRDS) working group, and initial server and client implementations were released by the many Regional Internet
+The Registry Data Access Protocol (RDAP) is the successor protocol to the Whois protocol. 
+It was first ratified by the Internet Engineering Task Force (IETF) in March 2015 by
+their [WEIRDS](/misc/glossary.md#weirds) working group, and initial server and client 
+implementations were released shortly thereafter by the many Regional Internet
 Registries (RIRs) in June 2015.
 
-In the years since RDAP became standardized, extensions have been added and profiles have been specified. While this is a clear sign of the success of the protocol,
-the amount of information spread across RFCs, IANA registries and other documents makes specification information more difficult to acquire and implementations
+In the years since RDAP became standardized, extensions have been added and profiles 
+have been specified. While this is a clear sign of the success of the protocol,
+the amount of information spread across RFCs, IANA registries and other documents makes 
+specification information more difficult to acquire and implementations
 harder to develop and deploy.
 
-This book is intended to help developers and others involved in the deployment of RDAP clients and servers. It is not intended as a user's guide to RDAP, as such a guide
+This book is intended to help developers and others involved in the deployment of 
+RDAP clients and servers. It is not intended as a user's guide to RDAP, as such a guide
 should be unnecessary if RDAP implementers are able to accomplish their goals.
+
+It is also not intended as a replacement for the RFCs and other specifications governing
+RDAP. However, it is intended to offer clearer text, more complete context, and more
+examples than one might find in the other sources. This should aid developers and others
+involved in the efforts of implementing RDAP clients and servers.
 
 ## Version
 
