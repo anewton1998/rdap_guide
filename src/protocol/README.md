@@ -13,3 +13,11 @@ payloads over [HTTP](https://en.wikipedia.org/wiki/HTTP). It can be visualized w
   +---------------------+
 ```
 
+this is a mermaid test
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
