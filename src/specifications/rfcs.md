@@ -24,6 +24,7 @@
 | [RFC 9224](https://datatracker.ietf.org/doc/rfc9224/) | Finding the Authoritative Registration Data Access Protocol (RDAP) Service                         | bootstrapping |
 | [RFC 9536](https://datatracker.ietf.org/doc/rfc9536/) | Registration Data Access Protocol (RDAP) Reverse Search                                            | reverse search |
 | [RFC 9537](https://datatracker.ietf.org/doc/rfc9537/) | Redacted Fields in the Registration Data Access Protocol (RDAP) Response                           | redaction |
+| [RFC 9560](https://datatracker.ietf.org/doc/rfc9560/) | Federated Authentication for the Registration Data Access Protocol (RDAP) Using OpenID Connect     | open id |
 
 ### Relevant [vCard](/misc/glossary.md#vdard) and [jCard](/misc/glossary.md#jcard) RFCs
 
