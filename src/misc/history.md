@@ -45,3 +45,8 @@ lightweight domain availability schema called DCHK.
 
 Ultimately, VeriSign never deployed IRIS. However, IRIS DCHK was used by DeNIC and Afnic. The [CRISP Requirements (RFC 3707)](https://datatracker.ietf.org/doc/rfc3707/)
 were used as an input to the [WEIRDS](/misc/glossary.md#weirds) working group which produced the RDAP specifications.
+
+In 2010, ARIN developed Whois-RWS (where RWS stands for RESTful Web Service), which is an HTTP-based system for retreiving Whois information.
+With the experience of Whois-RWS and encouragement from ICANN staff to help pursue the [SSAC 051](https://itp.cdn.icann.org/en/files/security-and-stability-advisory-committee-ssac-reports/sac-051-en.pdf)
+goals, the [WEIRDS BoF](https://www.ietf.org/proceedings/82/slides/weirds-0.pdf) was held in 2011 kicking off the [WEIRDS](/misc/glossary.md#weirds)
+working group, which then created the RDAP specifications.
