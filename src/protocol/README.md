@@ -6,119 +6,73 @@ It defines only the `GET` and `HEAD` HTTP methods, and URL paths are defined as 
 `http https://rdap.iana.org/domain/example.com accept:application/rdap+json`.
 
 ```
-GET /domain/example.com HTTP/1.1
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-Host: rdap.iana.org
-User-Agent: HTTPie/3.2.2
-accept: application/rdap+json
-
-
-
-HTTP/1.1 200 OK
-Strict-Transport-Security: max-age=48211200; preload
-access-control-allow-origin: *
-content-length: 984
-content-type: application/rdap+json
-date: Sat, 27 Apr 2024 19:44:49 GMT
-server: uvicorn
-
-{
-    "entities": [
-        {
-            "objectClassName": "entity",
-            "roles": [
-                "registrant"
-            ],
-            "vcardArray": [
-                "vcard",
-                [
-                    [
-                        "version",
-                        {},
-                        "text",
-                        "4.0"
-                    ],
-                    [
-                        "fn",
-                        {},
-                        "text",
-                        "Internet Assigned Numbers Authority"
-                    ],
-                    [
-                        "role",
-                        {},
-                        "text",
-                        "Registrant"
-                    ]
-                ]
-            ]
-        }
-    ],
-    "events": [
-        {
-            "eventAction": "last changed",
-            "eventDate": "1992-01-01T00:00:00+00:00"
-        },
-        {
-            "eventAction": "registration",
-            "eventDate": "1992-01-01T00:00:00+00:00"
-        }
-    ],
-    "ldhName": "example.com",
-    "links": [
-        {
-            "href": "https://rdap.iana.org/domain/example.com",
-            "rel": "self",
-            "type": "application/rdap+json",
-            "value": "https://rdap.iana.org/domain/example.com"
-        }
-    ],
-    "notices": [
-        {
-            "description": [
-                "Terms of Service"
-            ],
-            "links": [
-                {
-                    "href": "https://www.icann.org/privacy/tos",
-                    "rel": "alternate",
-                    "type": "text/html"
-                }
-            ],
-            "title": "Terms of Service"
-        },
-        {
-            "description": [
-                "Privacy Policy"
-            ],
-            "links": [
-                {
-                    "href": "https://www.icann.org/privacy/policy",
-                    "rel": "alternate",
-                    "type": "text/html"
-                }
-            ],
-            "title": "Privacy Policy"
-        }
-    ],
-    "objectClassName": "domain",
-    "rdapConformance": [
-        "rdap_level_0"
-    ],
-    "secureDNS": {
-        "delegationSigned": false
-    },
-    "status": [
-        "active"
-    ]
-}  
+{{#include http_example_com.out}}    
 ```
 
 This output shows an HTTP GET request of `/domain/example.com` from the client with a 200 OK response from the server.
 The response contains JSON, most of which is directly defined in [RFC 9083](https://datatracker.ietf.org/doc/html/rfc9083).
 The parts not defined in RFC 9083 are [jCard](/misc/glossary.md#jcard) which is a JSON encoding of [vCard](/misc/glossary.md#vcard),
 the standard most users encounter when exchanging contact data (aka business cards) over email.
+
+Breaking down the output, the following is the HTTP request:
+
+```
+{{#include http_example_com.out::6}}    
+```
+
+This is all normal HTTP semantics. The RDAP specific parts are the URL, which has the defined `/domain` path (See [Lookups and Searches](#lookups-and-searches)).
+The other RDAP specific part is the media type of `application/rdap+json` in the `accept` header.
+
+The next section shows the HTTP response.
+
+```
+{{#include http_example_com.out:9:16}}    
+```
+Here, the important parts to note are the media type in the `content-type` header, which uses the RDAP media type,
+and the `access-control-allow-origin` header, which is used to allow web browsers to run Javascript sourced from one
+web site to use the RDAP content from an RDAP HTTP server.
+
+Next, the JSON returned can be broken down as follows. The first part is the "entity", which is the contact for the domain:
+
+```json
+{{#include http_example_com.out:19:49}}    
+```
+
+This is followed by the events, which show the date and time for the major changes to the domain itself:
+
+```json
+{{#include http_example_com.out:50:59}}    
+```
+
+Next is the domain name itself. This is called `ldhName` where "ldh" is short for "letters, digits, hyphens" referring to
+restriction of DNS names to be ASCII letters, digits or hyphens. There is a separate JSON value for Internationalized Domain Names (IDNs).
+
+```json
+{{#include http_example_com.out:60:60}}    
+```
+
+Next is the link to the domain, used by some clients for caching purposes. Note that the `rel` value is `self`
+and the `type` value is the RDAP media type of `application/rdap+json`.
+
+```json
+{{#include http_example_com.out:61:68}}    
+```
+
+Next are notices from the server operator:
+
+```json
+{{#include http_example_com.out:69:96}}    
+```
+
+Next, the following is given:
+1. the type of the object being returned is given. This is used by clients to determine the type of object being returned.
+1. the `rdapConformance` array, which lists the extensions in use by the RDAP server.
+1. the data signifying if `example.com` is signed in the DNS (i.e. DNSSEC).
+1. the status of the domain, which is active.
+
+```json
+{{#include http_example_com.out:97:106}}    
+```
 
 ## Lookups and Searches
 

@@ -75,3 +75,36 @@ AS RDAP has no PUT, POST, DELETE, and PATCH methods and is only a data retreival
 public data, replay attacks are not usually of great concern. However, RDAP server operators using authorization
 to provided differentiated access to RDAP data should take the precautions outlined in 
 [RFC 8470](https://datatracker.ietf.org/doc/html/rfc8470).
+
+### TLSA Records
+
+Authentication, that is the act of verifying the identity of the other party, in TLS uses X.509 (PKIX) cryptographic certificates.
+In normal TLS usage, these certificates are transferred during the TLS handshake and verified by a client (and/or server) using
+a set of pre-configured certificates that are either embedded in the software or are part of the operating system (or both). TLSA
+is a means to use DNS to provide another source of those set of valid certificates in which to validate the other party in a TLS
+handshake.
+
+TLSA is part of the [DNS-Based Authentication of Named Entities (DANE)](https://datatracker.ietf.org/doc/html/rfc6698) specifications
+and is defined in [RFC 7671](https://datatracker.ietf.org/doc/html/rfc7671).
+
+Though usage of TLSA with RDAP is encouraged by [ICANN](/specifications/icann.md), for all practical purposes TLSA is not used
+in RDAP despite its deployment by many gTLD registries. The reason for this is that there are no known HTTP client libraries that
+support TLSA nor are there any known RDAP clients using TLSA. Additionally, the IETF has not published any guidelines on usage
+of TLSA with HTTP as it has done with [SMTP](https://datatracker.ietf.org/doc/html/rfc7672). As outlined in this
+[slide presentation from Shumon Huque](https://indico.dns-oarc.net/event/43/contributions/928/attachments/901/1648/dane-overview-shumon.pdf),
+HTTP using protocols have a series of challenges for which TLSA is not ideal. Though not yet a standard, [RFC 9102](https://datatracker.ietf.org/doc/html/rfc9102)
+describes an expirmental feature of TLS to use DANE without TLSA.
+
+Should an RDAP service wish to use TLSA, the following suggests are made in the absence of any other HTTP or RDAP specific
+TLSA guidelines:
+* Certificate usage should be 3 (DANE-EE) which identifies the certificate in use by the RDAP server.
+* Selector should be 1 (SPKI) which ties the TLSA record to the Subject Public Key Identifier of the 
+certificate thus avoiding the need to refresh the TLSA record when the certificate is re-issued unless it is also re-keyed.
+* Matching type should be 1 (SHA-256) as SHA-512 is not manditory to implement by DNSSEC client libraries.
+
+Client implementers wishing to support TLSA should be aware of the requirements to do so, which are:
+1. Either the client is to fully validate DNSSEC records or is to have a secure channel to a DNS resolver which does so.
+2. There may be multiple TLSA records, so each record must be evaluated until one is found to work.
+3. If no TLSA records are found to work, the TLS handshake must fall-back to normal certificate validation.
+
+

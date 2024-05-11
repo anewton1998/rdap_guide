@@ -1,0 +1,108 @@
+GET /domain/example.com HTTP/1.1
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Host: rdap.iana.org
+User-Agent: HTTPie/3.2.2
+accept: application/rdap+json
+
+
+
+HTTP/1.1 200 OK
+Strict-Transport-Security: max-age=48211200; preload
+access-control-allow-origin: *
+content-length: 984
+content-type: application/rdap+json
+date: Sat, 27 Apr 2024 19:44:49 GMT
+server: uvicorn
+
+{
+    "entities": [
+        {
+            "objectClassName": "entity",
+            "roles": [
+                "registrant"
+            ],
+            "vcardArray": [
+                "vcard",
+                [
+                    [
+                        "version",
+                        {},
+                        "text",
+                        "4.0"
+                    ],
+                    [
+                        "fn",
+                        {},
+                        "text",
+                        "Internet Assigned Numbers Authority"
+                    ],
+                    [
+                        "role",
+                        {},
+                        "text",
+                        "Registrant"
+                    ]
+                ]
+            ]
+        }
+    ],
+    "events": [
+        {
+            "eventAction": "last changed",
+            "eventDate": "1992-01-01T00:00:00+00:00"
+        },
+        {
+            "eventAction": "registration",
+            "eventDate": "1992-01-01T00:00:00+00:00"
+        }
+    ],
+    "ldhName": "example.com",
+    "links": [
+        {
+            "href": "https://rdap.iana.org/domain/example.com",
+            "rel": "self",
+            "type": "application/rdap+json",
+            "value": "https://rdap.iana.org/domain/example.com"
+        }
+    ],
+    "notices": [
+        {
+            "description": [
+                "Terms of Service"
+            ],
+            "links": [
+                {
+                    "href": "https://www.icann.org/privacy/tos",
+                    "rel": "alternate",
+                    "type": "text/html"
+                }
+            ],
+            "title": "Terms of Service"
+        },
+        {
+            "description": [
+                "Privacy Policy"
+            ],
+            "links": [
+                {
+                    "href": "https://www.icann.org/privacy/policy",
+                    "rel": "alternate",
+                    "type": "text/html"
+                }
+            ],
+            "title": "Privacy Policy"
+        }
+    ],
+    "objectClassName": "domain",
+    "rdapConformance": [
+        "rdap_level_0"
+    ],
+    "secureDNS": {
+        "delegationSigned": false
+    },
+    "status": [
+        "active"
+    ]
+}  
+
