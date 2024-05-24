@@ -16,17 +16,17 @@ definitions and query parameters would likely make it a hard fit for any other m
 
 ## HTTPS
 
-Support for HTTPS by both RDAP clients and servers is a requirement. This stated in RFC 7480
+Support for HTTPS by both RDAP clients and servers is a requirement. This is stated in RFC 7480
 in both Sections 4 and 7.
 
 This wording does not preclude the use of insecure HTTP, though at the time of ratification
 of RFC 7480 the [IESG](https://www.ietf.org/about/groups/iesg/) asked for the use of HTTPS
-to be manditory. It was not made manditory at the time due to known issues with load balancers.
+to be manditory. It was not made mandatory at the time due to known issues with load balancers.
 Should the IETF ever revisit this requirement, it almost certainly would mandate usage of HTTPS.
 
 Therefore, it is best that all production deployments support HTTPS and redirect all insecure HTTP
 queries to HTTPS, especially as all RDAP software is to support HTTPS to be compliant with the
-standards. [For gTLDs](https://www.icann.org/en/system/files/files/rdap-technical-implementation-guide-15feb19-en.pdf), 
+standards. [For gTLDs](/specifications/icann.md), 
 HTTPS is the only allowable form of RDAP.
 
 ## HTTP Versions

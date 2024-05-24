@@ -33,7 +33,7 @@ by [some Internet Service Providers in the ARIN region](https://www.arin.net/res
 In 1995, the IETF published the Whois++ specification as a standards track protocol, [RFC 1835](https://datatracker.ietf.org/doc/html/rfc1835).
 This protocol never found widespread deployment and is now considered Historic by the IETF.
 
-In 1996, Sandia National Laboratory publised an Informational RFC on using the X.500 Directory Access Protocol as a "white pages"
+In 1996, Sandia National Laboratory published an Informational RFC on using the X.500 Directory Access Protocol as a "white pages"
 service for the United States: [RFC 1943](https://datatracker.ietf.org/doc/html/rfc1943).
 
 And in December 2003, VeriSign published information on an experiment to use LDAP to replace Whois: [RFC 3663](https://www.rfc-editor.org/rfc/rfc3663.html).
@@ -49,7 +49,7 @@ lightweight domain availability schema called DCHK.
 Ultimately, VeriSign never deployed IRIS. However, IRIS DCHK was used by DeNIC and Afnic. The [CRISP Requirements (RFC 3707)](https://datatracker.ietf.org/doc/rfc3707/)
 were used as an input to the [WEIRDS](/misc/glossary.md#weirds) working group which produced the RDAP specifications.
 
-In 2010, ARIN developed Whois-RWS (where RWS stands for RESTful Web Service), which is an HTTP-based system for retreiving Whois information.
+In 2010, ARIN developed Whois-RWS (where RWS stands for RESTful Web Service), which is an HTTP-based system for retrieving Whois information.
 With the experience of Whois-RWS and encouragement from ICANN staff to help pursue the [SSAC 051](https://itp.cdn.icann.org/en/files/security-and-stability-advisory-committee-ssac-reports/sac-051-en.pdf)
 goals, the [WEIRDS BoF](https://www.ietf.org/proceedings/82/slides/weirds-0.pdf) was held in 2011 kicking off the [WEIRDS](/misc/glossary.md#weirds)
 working group, which then created the RDAP specifications.

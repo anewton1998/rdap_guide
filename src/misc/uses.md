@@ -27,7 +27,7 @@ such as log analysis, inventory management, intrusion detection, etc...
 ## Writing A Simple RDAP Client
 
 Let's say you are a network operator and are given a text file with IP addresses with the task
-of finding their registred CIDR blocks, perhaps for creating an access control list. 
+of finding their registered CIDR blocks, perhaps for creating an access control list. 
 
 ```
 {{#include ip_inventory.txt}}  
