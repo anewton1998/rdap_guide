@@ -10,6 +10,13 @@ title = "An Implementer's Guide to the Registry Data Access Protocol (RDAP)"
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 
+[preprocessor.variables]
+use_env = true
+
+[preprocessor.variables.variables]
+# apparently needed for some reason
+other_variabled_not_in_env= "value"
+
 [output]
 
 [output.html]

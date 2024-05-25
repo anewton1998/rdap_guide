@@ -23,15 +23,9 @@ involved in the efforts of implementing RDAP clients and servers.
 
 ## Version
 
-This book will undergo many revisions and versions as information is added.
+This book is a living document and is updated on an as-needed basis.
 
-The following table describes the version history.
-
-|Version|Date        |
-|-------|------------|
-|0.1    |Begun 24 April 2024|
-
-
+This version built on {{CURRENT_BUILD_TIME}}.
 
 ## Contributing
 
