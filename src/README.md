@@ -37,6 +37,10 @@ The following table describes the version history.
 
 Contributions to this book are welcome. See [Contributing](misc/contributing.md).
 
+## Copyright
+
+Copyright (C) 2024 Andrew Newton
+
 ## License
 
 The source for this book is released under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
