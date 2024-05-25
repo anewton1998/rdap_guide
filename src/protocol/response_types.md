@@ -55,7 +55,7 @@ respond at all.
 
 ## Redirects
 
-There are many cases in which an RDAP server returns a redirect, especially the [RIRs](misc/glossary.md#rir).
+There are many cases in which an RDAP server returns a redirect, especially the [RIRs](../misc/glossary.md#rir).
 [RFC 7480](https://datatracker.ietf.org/doc/html/rfc7480#section-5) does not specify which is
 appropriate to use leaving that decision up to the server operator. The RFC simply lists the availabe
 types of redirects:

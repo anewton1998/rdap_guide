@@ -36,6 +36,10 @@ INRs are composed of [RIRs](#rir) but also Local Internet Registries (LIRs) and 
 
 jCard is the JSON version of the [vCard](#vcard) standard, which defines the details of a contact. It is standardized in [RFC 7095](https://datatracker.ietf.org/doc/html/rfc7095).
 
+### NRO
+
+The [Number Resource Organization](https://www.nro.net/) is a coordination group for the [RIRs](#rir).
+
 ### RDAP 
 
 The Registration Data Access Protocol is the name of the set of specifications for accessing data from Internet resource registries.
