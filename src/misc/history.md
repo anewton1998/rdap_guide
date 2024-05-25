@@ -1,6 +1,6 @@
 # History of RDAP
 
-The Registry Data Access Protocol (RDAP) is the successor protocol to the Whois protocol. 
+The Registration Data Access Protocol (RDAP) is the successor protocol to the Whois protocol. 
 It was first ratified by the [IETF](/misc/glossary.md#ietf) in March 2015 by
 their [WEIRDS](/misc/glossary.md#weirds) working group, and 
 initial server and client implementations were released by the American Registry for

@@ -38,7 +38,7 @@ jCard is the JSON version of the [vCard](#vcard) standard, which defines the det
 
 ### RDAP 
 
-The Registry Data Access Protocol is the name of the set of specifications for accessing data from Internet resource registries.
+The Registration Data Access Protocol is the name of the set of specifications for accessing data from Internet resource registries.
 
 ### REGEXT
 
