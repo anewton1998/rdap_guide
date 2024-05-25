@@ -39,6 +39,7 @@ jobs:
           cargo install --version ${MDBOOK_VERSION} mdbook
           cargo install mdbook-mermaid
           cargo install mdbook-variables
+          cargo install mdbook-svgbob2
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

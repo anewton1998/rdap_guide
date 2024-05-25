@@ -1,6 +1,17 @@
 # The Protocol
 
 The core of RDAP is a simple [REST](https://en.wikipedia.org/wiki/REST)-like protocol using [JSON](https://en.wikipedia.org/wiki/JSON).
+
+```svgbob
++-----------------------------+
+|  RDAP                       |
++-----------------------------+
+|  JSON                       |
++-----------------------------+
+|  HTTP / HTTPS               |
++-----------------------------+
+```
+
 It defines only the `GET` and `HEAD` HTTP methods, and URL paths are defined as patterns. The following is the output of the
 [HTTPie](https://httpie.io/) program invoked to get information about `example.com` from IANA's RDAP servers:
 `http https://rdap.iana.org/domain/example.com accept:application/rdap+json`.

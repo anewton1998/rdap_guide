@@ -13,6 +13,7 @@ Then install mdbook and the necessary mdbook preprocessors:
 cargo install mdbook
 cargo install mdbook-mermaind
 cargo install mdbook-variables
+cargo install mdbook-svgbob2
 ~~~
 
 Build the book with `CURRENT_BUILD_DATE=$(date) mdbook build`.

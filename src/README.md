@@ -1,3 +1,16 @@
+```svgbob
++----------------------------------------+
+|                                        |
+|          .--. .-+  .--. .--.           |
+|          |__| |  \ |__| |__|           |
+|          | \  |__/ |  | |              |
+|                                        |
+| The Registration Data Access Protocol  |
+|                                        |
++----------------------------------------+
+
+```
+
 # Introduction
 
 The Registration Data Access Protocol (RDAP) is the successor protocol to the Whois protocol. 

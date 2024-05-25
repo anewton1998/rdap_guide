@@ -17,6 +17,8 @@ use_env = true
 # apparently needed for some reason
 other_variabled_not_in_env= "value"
 
+[preprocessor.svgbob2]
+
 [output]
 
 [output.html]
