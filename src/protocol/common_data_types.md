@@ -9,7 +9,7 @@ This is a special array that must only appear in the top most JSON of an RDAP
 response. It is used by a server to signal to a client the RDAP verion supported
 by the server (there is only one) and any extensions.
 
-```javascript
+```json
 "rdapConformance" :
 [
   "rdap_level_0"
@@ -20,7 +20,7 @@ In the original versions of RDAP ([RFC 7483](https://datatracker.ietf.org/doc/rf
 this array was not mandatory. However, [RFC 9083](https://datatracker.ietf.org/doc/rfc9083/)
 made it a requirement of all responses.
 
-```javascript
+```json
 "rdapConformance" :
 [
   "rdap_level_0",     // rdap version 0
@@ -37,7 +37,7 @@ the extensions used in that response.
 The links array contains objects which represent a link and its metadata, as
 defined by [RFC 8288](https://datatracker.ietf.org/doc/html/rfc8288).
 
-```javascript
+```json
 {
   "value" :    "https://example.com/context_uri", // REQUIRED - the context of the link
   "rel" :      "self",                            // REQUIRED - the relationship of the link
@@ -74,7 +74,7 @@ to the object in which they are found. Therefore, notices are only found in the 
 level of an RDAP response while remarks may be found in an RDAP object.
 
 
-```javascript
+```json
 "notices" :    // or "remarks"
 [
   {
@@ -112,7 +112,7 @@ information to a user.
 The `events` data structure is an array of event objects describing what happened at
 what time and, optionally, by whom.
 
-```javascript
+```json
 "events" :
 [
   {
@@ -143,7 +143,7 @@ to the entity by using a `rel` of "related" and a `type` of "application/rdap+js
 
 The objects in this array denote non-URI public identifiers.
 
-```javascript
+```json
 "publicIds":
 [
   {
@@ -167,7 +167,7 @@ of language, script, region and variant subtags that are found in the
 The format can get very complicated but in practice is usually just a language subtag, such as "en", or
 a language subtag followed by a region subtag, such as "en-US".
 
-```javascript
+```json
 "lang" : "en-UK"
 ```
 
@@ -180,7 +180,7 @@ a [remark or notice](#notices-and-remarks).
 The status array contains a list of strings, each with a value that must come from the
 [IANA RDAP JSON Values Registry](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml).
 
-```javascript
+```json
 "status" : [ "active", "locked" ]
 ```
 
@@ -190,7 +190,7 @@ The "port43" string contains either the hostname or IP address of a [Whois](misc
 that might contain the same information. The reason this is not represented in a "links" object is that
 a URI for Whois was never defined. In practice, this information is useless.
 
-```javascript
+```json
 "port43" : "whois.example.com"
 ```
 
@@ -208,6 +208,6 @@ values depending on the object class being represented:
 This string is the descriminator used by clients when parsing the JSON object into an RDAP object class.
 
 
-```javascript
+```json
 "objectClassName" : "ip network"
 ```
