@@ -52,7 +52,7 @@ In practice, registries only use a subset and clients can limit their implementa
 * [contact-uri](#contact-uri-property)
 * [email](#email-property)
 * [fn](#fn-property) -- **required**
-* [kind](#kind-property) -- **required**
+* [kind](#kind-property)
 * [lang](#lang-property)
 * [org](#org-property)
 * [role](#role-property)
@@ -296,11 +296,8 @@ many values, but in practice it is either "individual", "org", or "group".
 ]
 ```
 
-At least one of these properties is required by jCard/vCard, however it is quite common for RDAP servers
-to omit this property. Unlike the `fn` property, the value for `kind` must not be an empty string which
-causes problems for servers which are not allowed to present this information for policy reasons.
-
-Therefore, RDAP clients should be aware that this property may not be present.
+No more than one of these properties is required by jCard/vCard. However, when present
+it cannot have an empty value.
 
 ## `lang` Property
 
