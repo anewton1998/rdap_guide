@@ -3,7 +3,7 @@ authors = ["Andy Newton"]
 language = "en"
 multilingual = false
 src = "src"
-title = "An Implementer's Guide to the Registration Data Access Protocol (RDAP)"
+title = "A Guide to the Registration Data Access Protocol (RDAP)"
 
 [preprocessor]
 

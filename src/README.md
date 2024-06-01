@@ -25,9 +25,9 @@ the amount of information spread across RFCs, IANA registries and other document
 specification information more difficult to acquire and implementations
 harder to develop and deploy.
 
-This book is intended to help developers and others involved in the deployment of 
-RDAP clients and servers. It is not intended as a user's guide to RDAP, as such a guide
-should be unnecessary if RDAP implementers are able to accomplish their goals.
+This book is intended to describe RDAP a in way the RFCs do not, and in many cases cannot
+describe the protocol and its ecosystem through the use of [mdbook](https://rust-lang.github.io/mdBook/index.html),
+the many mdbook plugins, annotated examples, easier to read language and references to other materials. 
 
 It is also not intended as a replacement for the RFCs and other specifications governing
 RDAP. However, it is intended to offer clearer text, more complete context, and more

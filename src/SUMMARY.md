@@ -16,6 +16,7 @@
         - [Common Data Types](protocol/common_data_types.md)
         - [Object Classes](protocol/object_classes.md)
         - [jCard and vCard](protocol/jcard_and_vcard.md)
+    - [Extensions](protocol/extensions.md)
 - [Finding Servers](bootstrapping/README.md)
     - [The IANA Files](bootstrapping/iana.md)
     - [Redirects](bootstrapping/redirects.md)
