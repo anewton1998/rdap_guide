@@ -111,7 +111,7 @@ part of the path segment. As mentioned above, fixes to this are in active discus
 
 ## RDAP Conformance Array
 
-The [RDAP conformance array](common_data_types.html#the-rdap-conformance-array) is a data structure 
+The [RDAP conformance array](common_data_structures.md#rdapconformance) is a data structure 
 that is a property of the JSON object returned as an RDAP response. It does not appear anywhere but 
 as a direct child property of this JSON object (i.e. "top-most").
 

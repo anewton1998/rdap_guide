@@ -20,7 +20,7 @@
         - [Query Parameters](protocol/query_parameters.md)
         - [URL Paths](protocol/url_paths.md)
     - [The JSON Data Model](protocol/json.md)
-        - [Common Data Types](protocol/common_data_types.md)
+        - [Common Data Structures](protocol/common_data_structures.md)
         - [Object Classes](protocol/object_classes.md)
         - [jCard and vCard](protocol/jcard_and_vcard.md)
         // TODO searches

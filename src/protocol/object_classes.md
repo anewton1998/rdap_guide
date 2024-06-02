@@ -10,7 +10,7 @@ RDAP defines 5 core object classes:
 * [IP Network](#ip-network) - an IP address block registration
 * [Autnum](#autnum) - an Autonomous System Number block registration
 
-Object classes are composed of [the common data structures](common_data_types.md) as well as
+Object classes are composed of [the common data structures](common_data_structures.md) as well as
 other JSON structures specific to each. Additionally, all of the object classes can have
 [child entities](#entity-children) and some can have [child ip networks](#ip-network-children),
 [child autnums](#autnum-children), and [child nameservers](#nameserver-children).
@@ -39,26 +39,26 @@ often called "contacts".
 
 The entity object class has the following JSON data structures:
 
-| Name            | Value                                                                  |
-|-----------------|------------------------------------------------------------------------|
-|`objectClassName`|a common type defined [here](common_data_types.md#objectclassname)      |
-|`handle`         |a registry-unique string identifier                                     |
-|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.md)                                   |
+| Name            | Value                                                                       |
+|-----------------|-----------------------------------------------------------------------------|
+|`objectClassName`|a common type defined [here](common_data_structures.md#objectclassname)      |
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).         |
+|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.md)                                        |
 |`roles`          |an array of strings describing the role the entity fulfills with repect to the object that is its parent. These values must be registered in the IANA [RDAP JSON Values](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml) registry.|
-|`publicIds`      |a common type defined [here](common_data_types.md#publicids)            |
-|`entities`       |an array of objects as defined by this object class                     |
-|`remarks`        |a common type defined [here](common_data_types.md#notices-and-remarks)  |
-|`links`          |a common type defined [here](common_data_types.md#links)                |
-|`events`         |a common type defined [here](common_data_types.md#events)               |
-|`asEventActor`   |an array of [events](common_data_types.md#events) without the `eventActor` JSON member. These are meant to define the entity as being the event actor. This is seldom used.|
-|`status`         |a common type defined [here](common_data_types.md#status)               |
-|`port43`         |a common type defined [here](common_data_types.md#port43)               |
-|`networks`       |an array of [IP networks](#ip_network)                                  |
-|`autnums`        |an array of [autnums](#autnum)                                          |
+|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)            |
+|`entities`       |an array of objects as defined by this object class                          |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)  |
+|`links`          |a common type defined [here](common_data_structures.md#links)                |
+|`events`         |a common type defined [here](common_data_structures.md#events)               |
+|`asEventActor`   |an array of [events](common_data_structures.md#events) without the `eventActor` JSON member. These are meant to define the entity as being the event actor. This is seldom used.|
+|`status`         |a common type defined [here](common_data_structures.md#status)               |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)               |
+|`networks`       |an array of [IP networks](#ip_network)                                       |
+|`autnums`        |an array of [autnums](#autnum)                                               |
 
 The following is a contrived [example](entity-dnr.json) of an entity. Keep in mind that 
-[`rdapConformance`](common_data_types.html#the-rdap-conformance-array) and
-[`notices`](common_data_types.html#notices-and-remarks) are common to all
+[`rdapConformance`](common_data_structures.md#rdapconformance) and
+[`notices`](common_data_structures.md#notices-and-remarks) are common to all
 RDAP responses.
 
 ```json

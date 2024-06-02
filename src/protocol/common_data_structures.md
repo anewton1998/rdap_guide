@@ -177,7 +177,7 @@ what time and, optionally, by whom.
 The `eventAction` property must come from the
 [IANA RDAP JSON Values Registry](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml).
 And the `eventDate` property is a string containing an [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339)
-date and time.
+date and time (see [this](json.md#date-and-time) for caveats and usage).
 
 If the `eventActor` is an RDAP entity, then the `links` array may contain a referral
 to the entity by using a `rel` of "related" and a `type` of "application/rdap+json".
