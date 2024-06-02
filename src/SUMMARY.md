@@ -10,14 +10,21 @@
     - [HTTP](protocol/http.md)
         - [Headers](protocol/headers.md)
         - [Response Types](protocol/response_types.md)
+        // TODO combine query parameters and paths into "URLs"
+        // TODO cover base URLs
+        // TODO cover 9082 queries
         - [Query Parameters](protocol/query_parameters.md)
         - [URL Paths](protocol/url_paths.md)
     - [The JSON Data Model](protocol/json.md)
         - [Common Data Types](protocol/common_data_types.md)
         - [Object Classes](protocol/object_classes.md)
         - [jCard and vCard](protocol/jcard_and_vcard.md)
+        // TODO searches
+        // TODO errors
+        // TODO help
     - [Extensions](protocol/extensions.md)
 - [Finding Servers](bootstrapping/README.md)
+    // TOOD mention redirect servers
     - [The IANA Files](bootstrapping/iana.md)
     - [Redirects](bootstrapping/redirects.md)
     - [Referrals](bootstrapping/referrals.md)

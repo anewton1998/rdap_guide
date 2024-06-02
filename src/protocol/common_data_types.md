@@ -1,7 +1,17 @@
 # Common Data Types
 
 The common data types are simply definitions of JSON that are commonly found
-in the [object classes](protocol/object_classes.md).
+in the [object classes](protocol/object_classes.md). These are:
+
+* [`rdapConformance`](common_data_types.html#the-rdap-conformance-array)
+* [`links`](#the-links-array)
+* [`notices` and `remarks`](#notices-and-remarks)
+* [`events`](#events)
+* [`publicIds`](#public-ids)
+* [`lang`](#language-identifier)
+* [`status`](#status)
+* [`port43`](#port-43-whois-server)
+* [`objectClassName`](#object-class-name)
 
 ## The RDAP Conformance Array
 
