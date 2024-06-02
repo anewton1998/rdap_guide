@@ -3,17 +3,17 @@
 The common data types are simply definitions of JSON that are commonly found
 in the [object classes](protocol/object_classes.md). These are:
 
-* [`rdapConformance`](common_data_types.html#the-rdap-conformance-array)
-* [`links`](#the-links-array)
+* [`rdapConformance`](#rdapconformance)
+* [`links`](#links)
 * [`notices` and `remarks`](#notices-and-remarks)
 * [`events`](#events)
-* [`publicIds`](#public-ids)
-* [`lang`](#language-identifier)
+* [`publicIds`](#publicids)
+* [`lang`](#lang)
 * [`status`](#status)
-* [`port43`](#port-43-whois-server)
-* [`objectClassName`](#object-class-name)
+* [`port43`](#port43)
+* [`objectClassName`](#objectclassname)
 
-## The RDAP Conformance Array
+## The RDAP Conformance Array {#rdapconformance}
 
 This is a special array that must only appear in the top most JSON of an RDAP
 response. It is used by a server to signal to a client the RDAP verion supported
@@ -42,7 +42,7 @@ When used in response to a `/help` query, this array must list all extensions
 the server supports. However, when used for any other response it must only list
 the extensions used in that response.
 
-## The Links Array
+## The Links Array {#links}
 
 The links array contains objects which represent a link and its metadata, as
 defined by [RFC 8288](https://datatracker.ietf.org/doc/html/rfc8288).
@@ -78,7 +78,7 @@ registrar.
 
 ## Notices and Remarks
 
-The "notices" and "remarks" arrays are identical except for their names. The difference between
+The `notices` and `remarks` arrays are identical except for their names. The difference between
 the two is that notices are related to the response as a whole while the remarks are related
 to the object in which they are found. Therefore, notices are only found in the top-most
 level of an RDAP response while remarks may be found in an RDAP object.
@@ -89,7 +89,7 @@ level of an RDAP response while remarks may be found in an RDAP object.
 [
   {
     "title" : "Enhance Your Calm",
-    "type": "object truncated due to excessive load", // from RDAP JSON Values
+    "type": "result set truncated due to excessive load", // from RDAP JSON Values
     "description" :  // REQUIRED
     [
       "Some data has been truncated because of too many queries.",
@@ -116,6 +116,39 @@ If present, the value of the `type` property must come from the
 [IANA RDAP JSON Values Registry](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml).
 Clients can use this information to customize how the present the
 information to a user.
+
+For completeness, here is the following example from above but as a remark:
+
+```json
+"remarks" :
+[
+  {
+    "title" : "Enhance Your Calm",
+
+    // the type changes from "result set truncated due to excessive load" to
+    // "object truncated due to excessive load" because a remark is an
+    // object class level attribute whereas a notice is a response level
+    // attribute.
+    "type": "object truncated due to excessive load",
+
+    "description" :  // REQUIRED
+    [
+      "Some data has been truncated because of too many queries.",
+      "Calm down and come back later."
+    ],
+    "links" :
+    [
+      {
+        "value" : "https://example.net/entity/XXXX",
+        "rel" : "about",
+        "type" : "text/html",
+        "href" : "https://www.example.com/take-it-easy.html"
+      }
+    ]
+  }
+]
+
+```
 
 ## Events
 
@@ -149,7 +182,7 @@ date and time.
 If the `eventActor` is an RDAP entity, then the `links` array may contain a referral
 to the entity by using a `rel` of "related" and a `type` of "application/rdap+json".
 
-## Public IDs
+## Public IDs {#publicids}
 
 The objects in this array denote non-URI public identifiers.
 
@@ -166,7 +199,7 @@ The objects in this array denote non-URI public identifiers.
 Both `type` and `identifier` are strings of free form text. In practice, they are
 mostly used to identify gTLD registrars by their IANA registration number.
 
-## Language Identifier
+## Language Identifier {#lang}
 
 This is a simple string name "lang", and it contains a language identifier.
 The format for language identifiers is defined in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)
@@ -194,7 +227,7 @@ The status array contains a list of strings, each with a value that must come fr
 "status" : [ "active", "locked" ]
 ```
 
-## Port 43 Whois Server
+## Port 43 Whois Server {#port43}
 
 The "port43" string contains either the hostname or IP address of a [Whois](misc/glossary.md#whois) server
 that might contain the same information. The reason this is not represented in a "links" object is that
@@ -204,7 +237,7 @@ a URI for Whois was never defined. In practice, this information is useless.
 "port43" : "whois.example.com"
 ```
 
-## Object Class Name
+## Object Class Name {#objectclassname}
 
 Each RDAP object must have a string named "objectClassName". The string must have one of the following
 values depending on the object class being represented:

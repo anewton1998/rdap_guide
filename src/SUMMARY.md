@@ -6,6 +6,10 @@
 ---
 
 - [Uses of RDAP](misc/uses.md)
+    // TODO scripting examples
+    // put bash scripting example under here
+    // python example to accept a list of domain names and find the ones not DNSSEC
+    // rust example to take list of domain names and get the networks of the nameservers
 - [The Protocol](protocol/README.md)
     - [HTTP](protocol/http.md)
         - [Headers](protocol/headers.md)

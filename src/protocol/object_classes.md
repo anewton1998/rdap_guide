@@ -41,17 +41,18 @@ The entity object class has the following JSON data structures:
 
 | Name            | Value                                                                  |
 |-----------------|------------------------------------------------------------------------|
-|`objectClassName`|a common type defined [here](common_data_types.html#object-class-name)  |
+|`objectClassName`|a common type defined [here](common_data_types.md#objectclassname)      |
 |`handle`         |a registry-unique string identifier                                     |
-|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.html)                                 |
+|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.md)                                   |
 |`roles`          |an array of strings describing the role the entity fulfills with repect to the object that is its parent. These values must be registered in the IANA [RDAP JSON Values](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml) registry.|
-|`publicIds`      |a common type defined [here](common_data_types.html#public-ids)         |
+|`publicIds`      |a common type defined [here](common_data_types.md#publicids)            |
 |`entities`       |an array of objects as defined by this object class                     |
-|`remarks`        |a common type defined [here](common_data_types.html#notices-and-remarks)|
-|`links`          |a common type defined [here](common_data_types.html#the-links-array)    |
-|`events`         |a common type defined [here](common_data_types.html#events)             |
-|`asEventActor`   |an array of [events](common_data_types.html#events) without the `eventActor` JSON member. These are meant to define the entity as being the event actor. This is seldom used.|
-|`status`         |a common type defined [here](common_data_types.html#status)             |
+|`remarks`        |a common type defined [here](common_data_types.md#notices-and-remarks)  |
+|`links`          |a common type defined [here](common_data_types.md#links)                |
+|`events`         |a common type defined [here](common_data_types.md#events)               |
+|`asEventActor`   |an array of [events](common_data_types.md#events) without the `eventActor` JSON member. These are meant to define the entity as being the event actor. This is seldom used.|
+|`status`         |a common type defined [here](common_data_types.md#status)               |
+|`port43`         |a common type defined [here](common_data_types.md#port43)               |
 |`networks`       |an array of [IP networks](#ip_network)                                  |
 |`autnums`        |an array of [autnums](#autnum)                                          |
 
