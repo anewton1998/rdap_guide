@@ -1,0 +1,47 @@
+{
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "objectClassName" : "nameserver",
+   "handle" : "ns1-1",
+   "ldhName" : "ns1.xn--fo-5ja.example",
+   "unicodeName" : "ns1.foo.example",
+   "ipAddresses" : {
+      "v4" : [
+         "192.0.2.1",
+         "192.0.2.2"
+      ],
+      "v6" : [
+         "2001:db8::123"
+      ]
+   },
+   "links" : [
+      {
+         "href" : "https://rdap-bootstrap.arin.net/bootstrap/nameserver/ns1.xn--fo-5ja.example",
+         "rel" : "self",
+         "value" : "https://rdap-bootstrap.arin.net/bootstrap/nameserver/ns1.xn--fo-5ja.example"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "This is a sacrificial nameserver.",
+            "It is used for the temporary assignment of domains before deletion."
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1990-12-31T23:59:60Z"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventActor" : "alice@example.com",
+         "eventDate" : "1991-12-31T23:59:60Z"
+      }
+   ]
+}

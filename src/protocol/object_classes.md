@@ -41,22 +41,22 @@ often called "contacts".
 
 The entity object class has the following JSON data structures:
 
-| Name            | Value                                                                                        |
-|-----------------|----------------------------------------------------------------------------------------------|
-|`objectClassName`|(**REQUIRED**) a common type defined [here](common_data_structures.md#objectclassname)        |
-|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                          |
-|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.md)                                                         |
+| Name            | Value                                                                                                     |
+|-----------------|-----------------------------------------------------------------------------------------------------------|
+|`objectClassName`|(**REQUIRED**) must be "entity". See [`objectClassName`](common_data_structures.md#objectclassname)        |
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                                       |
+|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.md)                                                                      |
 |`roles`          |an array of strings describing the role the entity fulfills with repect to the object that is its parent. These values must be registered in the IANA [RDAP JSON Values](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml) registry.|
-|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)                             |
-|`entities`       |an array of objects as defined by this object class. See [entity children](#entity-children). |
-|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                   |
-|`links`          |a common type defined [here](common_data_structures.md#links)                                 |
-|`events`         |a common type defined [here](common_data_structures.md#events)                                |
+|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)                                          |
+|`entities`       |an array of objects as defined by this object class. See [entity children](#entity-children).              |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                                |
+|`links`          |a common type defined [here](common_data_structures.md#links)                                              |
+|`events`         |a common type defined [here](common_data_structures.md#events)                                             |
 |`asEventActor`   |an array of [events](common_data_structures.md#events) without the `eventActor` JSON member. These are meant to define the entity as being the event actor. This is seldom used.|
-|`status`         |a common type defined [here](common_data_structures.md#status)                                |
-|`port43`         |a common type defined [here](common_data_structures.md#port43)                                |
-|`networks`       |an array of [IP networks](#ip_network). See [IP network children](#ip-network-children).      |
-|`autnums`        |an array of [autnums](#autnum). See [autnum childre](#autnum-children).                       |
+|`status`         |a common type defined [here](common_data_structures.md#status)                                             |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)                                             |
+|`networks`       |an array of [IP networks](#ip_network). See [IP network children](#ip-network-children).                   |
+|`autnums`        |an array of [autnums](#autnum). See [autnum childre](#autnum-children).                                    |
 
 The following is a contrived [example](entity-dnr.json) of an entity. Keep in mind that 
 [`rdapConformance`](common_data_structures.md#rdapconformance) and
@@ -74,25 +74,25 @@ object classes.
 
 The domain object class has the following JSON data structures:
 
-| Name            | Value                                                                                        |
-|-----------------|----------------------------------------------------------------------------------------------|
-|`objectClassName`|(**REQUIRED**) a common type defined [here](common_data_structures.md#objectclassname)        |
-|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                          |
-|`ldhName`        |a letters-digits-hyphens (ldh, aka ASCII-only) domain name.                                   |
-|`unicodeName`    |the U-label version of an Internationalized Domain Name (IDN).                                |
-|`variants`       |set of variant IDNs for this domain. See [`variants`](#variants).                             |
-|`nameservers`    |an array of nameserver objects. See [nameserver children](#nameserver-children).              |
-|`secureDNS`      |DNSSEC information. See [DNSSEC data](#dnssec).                                               |
-|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)                             |
-|`entities`       |an array of entity objects. See [entity children](#entity-children).                          |
-|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                   |
-|`links`          |a common type defined [here](common_data_structures.md#links)                                 |
-|`events`         |a common type defined [here](common_data_structures.md#events)                                |
-|`status`         |a common type defined [here](common_data_structures.md#status)                                |
-|`port43`         |a common type defined [here](common_data_structures.md#port43)                                |
-|`network`        |a single instance of [IP networks](#ip_network).                                              |
+| Name            | Value                                                                                              |
+|-----------------|----------------------------------------------------------------------------------------------------|
+|`objectClassName`|(**REQUIRED**) must be "domain". See [`objectClassName`](common_data_structures.md#objectclassname).|
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                                |
+|`ldhName`        |a letters-digits-hyphens (ldh, aka ASCII-only) domain name.                                         |
+|`unicodeName`    |the U-label version of an Internationalized Domain Name (IDN).                                      |
+|`variants`       |set of variant IDNs for this domain. See [`variants`](#variants).                                   |
+|`nameservers`    |an array of nameserver objects. See [nameserver children](#nameserver-children).                    |
+|`secureDNS`      |DNSSEC information. See [DNSSEC data](#dnssec).                                                     |
+|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)                                   |
+|`entities`       |an array of entity objects. See [entity children](#entity-children).                                |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                         |
+|`links`          |a common type defined [here](common_data_structures.md#links)                                       |
+|`events`         |a common type defined [here](common_data_structures.md#events)                                      |
+|`status`         |a common type defined [here](common_data_structures.md#status)                                      |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)                                      |
+|`network`        |a single instance of [IP networks](#ip_network).                                                    |
 
-The following is a contrived [example](domain-dnr.json) of an entity. Keep in mind that 
+The following is a contrived [example](domain-dnr.json) of a domain. Keep in mind that 
 [`rdapConformance`](common_data_structures.md#rdapconformance) is common to all RDAP responses.
 
 ```json
@@ -261,7 +261,66 @@ Some times they may include the IP addresses of the nameservers.
 
 ## Nameserver
 
+The nameserver object class represents nameservers, or hosts as they are often called.
+They are most commonly children of [domain](#domain) objects (see [above](#namerserver-children)),
+but can be registerable objects as well.
+
+The nameserver object class has the following structures:
+
+| Name            | Value                                                                                                    |
+|-----------------|----------------------------------------------------------------------------------------------------------|
+|`objectClassName`|(**REQUIRED**) must be "nameserver". See [`objectClassName`](common_data_structures.md#objectclassname).  |
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                                      |
+|`ldhName`        |a letters-digits-hyphens (ldh, aka ASCII-only) fully-qualified domain name of the nameserver.             |
+|`unicodeName`    |the U-label version of Internationalized Domain Name (IDN) of the nameserver.                             |
+|`ipAddresses`    |an array of objects, each with a `v4` and `v6` string array containing the IP addresses of the nameserver.|
+|`entities`       |an array of entity objects. See [entity children](#entity-children).                                      |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                               |
+|`links`          |a common type defined [here](common_data_structures.md#links)                                             |
+|`events`         |a common type defined [here](common_data_structures.md#events)                                            |
+|`status`         |a common type defined [here](common_data_structures.md#status)                                            |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)                                            |
+
+The following is a contrived [example](ns.json) of an nameserver. Keep in mind that 
+[`rdapConformance`](common_data_structures.md#rdapconformance) is common to all RDAP responses.
+
+```json
+{{#include ns.json}}
+```
+
 ## IP Network
+
+The "ip network" object class represents the registration of an IP address block. As not all [INRs](../glossary.md#inr) require
+registrations on [CIDR](https://datatracker.ietf.org/doc/html/rfc4632) block boundaries, the IP address object defines the
+registration with a `startAddress` and `endAddress`.
+
+This object class has the following structures:
+
+| Name            | Value                                                                                                    |
+|-----------------|----------------------------------------------------------------------------------------------------------|
+|`objectClassName`|(**REQUIRED**) must be "ip network". See [`objectClassName`](common_data_structures.md#objectclassname).  |
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                                      |
+|`startAddress`   |a string containing the start IP address.                                                                 |
+|`endAddress`     |a string containing the end IP address.                                                                   |
+|`ipVersion`      |a string of either "v4" or "v6" denoting the IP address family version.                                   |
+|`name`           |a name for the registration usually given by the registration holder.                                     |
+|`type`           |a string containing an [RIR](../misc/glossary.md#rir) classification of the registration.                 |
+|`country`        |a string with the ISO 3166-2 Alpha2 country code where the network originates traffic.                    |
+|`parentHandle`   |the handle of the parent network.                                                                         |
+|`entities`       |an array of entity objects. See [entity children](#entity-children).                                      |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                               |
+|`links`          |a common type defined [here](common_data_structures.md#links)                                             |
+|`events`         |a common type defined [here](common_data_structures.md#events)                                            |
+|`status`         |a common type defined [here](common_data_structures.md#status)                                            |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)                                            |
+
+The following is an [example](ip-network.json) of an nameserver. Keep in mind that 
+[`rdapConformance`](common_data_structures.md#rdapconformance) and [`notices`](commond_data_structures.md#notices) are 
+common to all RDAP responses.
+
+```json
+{{#include ip-network.json}}
+```
 
 ## Autnum
 
