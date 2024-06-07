@@ -1,0 +1,129 @@
+{
+  "objectClassName" : "domain",
+  "handle" : "ex1-1",
+  "ldhName" : "xn--fo-5ja.example",
+  "unicodeName" : "fóo.example",
+  "status" : [ "locked", "transfer prohibited" ],
+  "nameservers" :
+  [
+    {
+      "objectClassName" : "nameserver",
+      "handle" : "ns1-1",
+      "ldhName" : "ns1.example.com",
+      "status" : [ "active" ],
+      "ipAddresses" :
+      {
+        "v6": [ "2001:db8::123", "2001:db8::124" ],
+        "v4": [ "192.0.2.1", "192.0.2.2" ]
+      },
+      "links" :
+      [
+        {
+          "value" : "https://example.net/nameserver/ns1.example.com",
+          "rel" : "self",
+          "href" : "https://example.net/nameserver/ns1.example.com",
+          "type" : "application/rdap+json"
+        }
+      ],
+      "events" :
+      [
+        {
+          "eventAction" : "registration", "eventDate" : "1990-12-31T23:59:59Z"
+        },
+        {
+          "eventAction" : "last changed", "eventDate" : "1991-12-31T23:59:59Z"
+        }
+      ]
+    },
+    {
+      "objectClassName" : "nameserver",
+      "handle" : "ns2-1",
+      "ldhName" : "ns2.example.com",
+      "status" : [ "active" ],
+      "ipAddresses" :
+      {
+        "v6" : [ "2001:db8::125", "2001:db8::126" ],
+        "v4" : [ "192.0.2.3", "192.0.2.4" ]
+      },
+      "links" :
+      [
+        {
+          "value" : "https://example.net/nameserver/ns2.example.com",
+          "rel" : "self",
+          "href" : "https://example.net/nameserver/ns2.example.com",
+          "type" : "application/rdap+json"
+        }
+      ],
+      "events" :
+      [
+        {
+          "eventAction" : "registration", "eventDate" : "1990-12-31T23:59:59Z"
+        },
+        {
+          "eventAction" : "last changed", "eventDate" : "1991-12-31T23:59:59Z"
+        }
+      ]
+    }
+  ],
+  "links" :
+  [
+    {
+      "value": "https://example.net/domain/xn--fo-5ja.example",
+      "rel" : "self",
+      "href" : "https://example.net/domain/xn--fo-5ja.example",
+      "type" : "application/rdap+json"
+    }
+  ],
+  "events" :
+  [
+    {
+      "eventAction" : "registration", "eventDate" : "1990-12-31T23:59:59Z"
+    },
+    {
+      "eventAction" : "last changed", "eventDate" : "1991-12-31T23:59:59Z",
+      "eventActor" : "alice@example.com"
+    },
+    {
+      "eventAction" : "transfer", "eventDate" : "1991-12-31T23:59:59Z",
+      "eventActor" : "alice@example.com"
+    },
+    {
+      "eventAction" : "expiration", "eventDate" : "2016-12-31T23:59:59Z",
+      "eventActor" : "alice@example.com"
+    }
+  ],
+  "entities" :
+  [
+    {
+      "objectClassName" : "entity",
+      "handle" : "regnt1-1",
+      "status" : [ "validated" ],
+      "roles" : [ "registrant" ],
+      "vcardArray":[
+        "vcard",
+        [ [ "version", {}, "text", "4.0" ],
+          [ "fn", {}, "text", "Alice Allison" ],
+          [ "kind", {}, "text", "individual" ],
+          [ "email", { "type":"work" }, "text", "alice@example.com" ] ]
+      ],
+      "links" :
+      [
+        {
+          "value" : "https://example.net/entity/regnt1-1",
+          "rel" : "self",
+          "href" : "https://example.net/entity/regnt1-1",
+          "type" : "application/rdap+json"
+        }
+      ],
+      "events" :
+      [
+        {
+          "eventAction" : "registration", "eventDate" : "2015-12-31T23:59:59Z"
+        },
+        {
+          "eventAction" : "last changed", "eventDate" : "2016-12-31T23:59:59Z"
+        }
+      ]
+    }
+  ]
+}

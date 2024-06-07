@@ -1,7 +1,9 @@
 # Object Classes
 
 In RDAP, the information being queried is an RDAP object, and the types or classes of those object are known
-as object classes. They are defined in [RFC 9083](https://datatracker.ietf.org/doc/html/rfc9083).
+as object classes. They are defined in [RFC 9083](https://datatracker.ietf.org/doc/html/rfc9083). Each
+instance of an object class is **REQUIRED** to have the [`objectClassName`](common_data_structures.md#objectclassname)
+attribute.
 
 RDAP defines 5 core object classes:
 * [Entity](#entity) - a person, organization, group, etc...
@@ -34,27 +36,27 @@ erDiagram
 
 ## Entity
 
-An entity represents a person, organization, role or group of people. In Whoi parlance, these are
+An entity represents a person, organization, role or group of people. In Whois parlance, these are
 often called "contacts".
 
 The entity object class has the following JSON data structures:
 
-| Name            | Value                                                                       |
-|-----------------|-----------------------------------------------------------------------------|
-|`objectClassName`|a common type defined [here](common_data_structures.md#objectclassname)      |
-|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).         |
-|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.md)                                        |
+| Name            | Value                                                                                        |
+|-----------------|----------------------------------------------------------------------------------------------|
+|`objectClassName`|(**REQUIRED**) a common type defined [here](common_data_structures.md#objectclassname)        |
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                          |
+|`vcardArray`     |see [jCard/vCard](jcard_and_vcard.md)                                                         |
 |`roles`          |an array of strings describing the role the entity fulfills with repect to the object that is its parent. These values must be registered in the IANA [RDAP JSON Values](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml) registry.|
-|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)            |
-|`entities`       |an array of objects as defined by this object class                          |
-|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)  |
-|`links`          |a common type defined [here](common_data_structures.md#links)                |
-|`events`         |a common type defined [here](common_data_structures.md#events)               |
+|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)                             |
+|`entities`       |an array of objects as defined by this object class. See [entity children](#entity-children). |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                   |
+|`links`          |a common type defined [here](common_data_structures.md#links)                                 |
+|`events`         |a common type defined [here](common_data_structures.md#events)                                |
 |`asEventActor`   |an array of [events](common_data_structures.md#events) without the `eventActor` JSON member. These are meant to define the entity as being the event actor. This is seldom used.|
-|`status`         |a common type defined [here](common_data_structures.md#status)               |
-|`port43`         |a common type defined [here](common_data_structures.md#port43)               |
-|`networks`       |an array of [IP networks](#ip_network)                                       |
-|`autnums`        |an array of [autnums](#autnum)                                               |
+|`status`         |a common type defined [here](common_data_structures.md#status)                                |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)                                |
+|`networks`       |an array of [IP networks](#ip_network). See [IP network children](#ip-network-children).      |
+|`autnums`        |an array of [autnums](#autnum). See [autnum childre](#autnum-children).                       |
 
 The following is a contrived [example](entity-dnr.json) of an entity. Keep in mind that 
 [`rdapConformance`](common_data_structures.md#rdapconformance) and
@@ -67,6 +69,196 @@ RDAP responses.
 
 ## Domain
 
+A domain object represents a domain registration. This is the most complicated of all the
+object classes.
+
+The domain object class has the following JSON data structures:
+
+| Name            | Value                                                                                        |
+|-----------------|----------------------------------------------------------------------------------------------|
+|`objectClassName`|(**REQUIRED**) a common type defined [here](common_data_structures.md#objectclassname)        |
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                          |
+|`ldhName`        |a letters-digits-hyphens (ldh, aka ASCII-only) domain name.                                   |
+|`unicodeName`    |the U-label version of an Internationalized Domain Name (IDN).                                |
+|`variants`       |set of variant IDNs for this domain. See [`variants`](#variants).                             |
+|`nameservers`    |an array of nameserver objects. See [nameserver children](#nameserver-children).              |
+|`secureDNS`      |DNSSEC information. See [DNSSEC data](#dnssec).                                               |
+|`publicIds`      |a common type defined [here](common_data_structures.md#publicids)                             |
+|`entities`       |an array of entity objects. See [entity children](#entity-children).                          |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                   |
+|`links`          |a common type defined [here](common_data_structures.md#links)                                 |
+|`events`         |a common type defined [here](common_data_structures.md#events)                                |
+|`status`         |a common type defined [here](common_data_structures.md#status)                                |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)                                |
+|`network`        |a single instance of [IP networks](#ip_network).                                              |
+
+The following is a contrived [example](domain-dnr.json) of an entity. Keep in mind that 
+[`rdapConformance`](common_data_structures.md#rdapconformance) is common to all RDAP responses.
+
+```json
+{{#include domain-dnr.json}}
+```
+
+### Variants
+
+The `variants` structure describes domains that are internationalized variants of the domain registration. This
+is an array of objects, each with the following members:
+
+
+| Name            | Value                                                                                        |
+|-----------------|----------------------------------------------------------------------------------------------|
+|`relation`       |array of strings, each a "domain variant relation" from the [RDAP JSON Values IANA Registry](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml).|
+|`idnTable`       |the name of the [IDN table](https://www.iana.org/domains/idn-tables).                         |
+|`variantNames`   |array of objects in the form `{"ldhName": "xn--fo-5ja.example", "unicodeName": "fóo.example"}`|
+
+The following excerpt is an example from RFC 9083:
+
+```json
+"variants" :
+[
+  {
+    "relation" : [ "registered", "conjoined" ],
+    "variantNames" :
+    [
+      {
+        "ldhName" : "xn--fo-cka.example",
+        "unicodeName" : "fõo.example"
+      },
+      {
+        "ldhName" : "xn--fo-fka.example",
+        "unicodeName" : "föo.example"
+      }
+    ]
+  },
+  {
+    "relation" : [ "unregistered", "registration restricted" ],
+    "idnTable": ".EXAMPLE Swedish",
+    "variantNames" :
+    [
+      {
+        "ldhName": "xn--fo-8ja.example",
+        "unicodeName" : "fôo.example"
+      }
+    ]
+  }
+]
+```
+
+### DNSSEC
+
+The `secureDNS` structure describes the information about the domain's DNS Security Extensions (DNSSEC). The topic
+of DNSSEC is broad. For understanding the meaning of the fields of this structure, readers should consult
+[RFC 4034](https://datatracker.ietf.org/doc/html/rfc4034).
+
+One interesting aspect of the `secureDNS` information is that RDAP can convey their updates separately from the
+domain name itself using the [`links`](common_data_structures.md#links) and [`events`](common_data_structures.md#events).
+
+| Name             | Value                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------|
+|`zoneSigned`      |`true` if the domain's zone is signed, otherwise `false`.                                      |
+|`delegationSigned`|`true` if the domain's parent zone has signed the delegation to this domain, otherwise `false`.|
+|`dsData`          |an array of objects describing Delegation Signer objects. See [below](#dsdata).                |
+|`keyData`         |an array of objects describing DNS Key objects. See [below](#keydata).                         |
+
+#### dsData
+| Name             | Value                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------|
+|`keyTag`          |the integer of the key tag field of a DS record.                                               |
+|`algorithm`       |the integer of the algorithm field of a DS record.                                             |
+|`digest`          |string containing the hexadecimal digest of the DS record.                                     |
+|`digestType`      |the integer of the digest type of a DS record.                                                 |
+|`links`           |a common type defined [here](common_data_structures.md#links)                                  |
+|`events`          |a common type defined [here](common_data_structures.md#events)                                 |
+
+#### keyData
+| Name             | Value                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------|
+|`flag`            |the integer of the flag field of a DNSKEY record.                                              |
+|`protocol`        |the integer of the protocol field of a DNSKEY record.                                          |
+|`publicKey`       |string containing the hexadecimal digest of a DNSKEY record public key.                        |
+|`algorithm`       |the integer of the algorithm field of a DNSKEY record.                                         |
+|`links`           |a common type defined [here](common_data_structures.md#links)                                  |
+|`events`          |a common type defined [here](common_data_structures.md#events)                                 |
+
+#### `secureDNS` example
+
+```json
+"secureDNS" : {
+  "delegationSigned" : true,
+  "dsData" : [
+    {
+      "algorithm" : 13,
+      "digest" : "B9BEC0EAC0F064929C8586DB185537787015EC3A48F0894BEA74DEEA452F3060",
+      "digestType" : 2,
+      "events" : [
+        {
+          "eventAction" : "registration",
+          "eventDate" : "2018-03-27T20:09:08Z"
+        },
+        {
+          "eventAction" : "last changed",
+          "eventDate" : "2022-04-27T20:19:46Z"
+        }
+      ],
+      "keyTag" : 47828
+    }
+  ]
+}
+```
+
+### Nameserver Children
+
+Registries can differ in how they model nameservers, often referred to as "hosts". None
+of the [RIRs](../misc/glossary.md#rir) allow direct registration of nameservers as they
+must be carefully managed to compose reverse DNS. Some [DNRs](../misc/glossary.md#dnr)
+do allow direct registration of nameservers and some do not.
+
+When a registry treats nameservers a "firs-class" objects (objects with a registration
+distinct from other objects), this is often called the "host object" model. Otherwise,
+this is often called the "host attribute" model.
+
+The [example](domain-dnr.json) given [above](#domain) shows a "host object" model.
+The "host attribute" model is usually much simpler, where the nameservers do not have
+a `handle` or other meta-data separate from the domain. The following is an example.
+
+```json
+"nameserver" : [
+  {
+    "objectClassName" : "nameserver",
+    "ldhName" : "ns1.example.com"
+  },
+  {
+    "objectClassName" : "nameserver",
+    "ldhName" : "ns2.example.com"
+  }
+]
+```
+
+Some times they may include the IP addresses of the nameservers.
+
+```json
+"nameserver" : [
+  {
+    "objectClassName" : "nameserver",
+    "ldhName" : "ns1.example.com",
+    "ipAddresses" :
+    {
+      "v6": [ "2001:db8::123", "2001:db8::124" ],
+      "v4": [ "192.0.2.1", "192.0.2.2" ]
+    }
+  },
+  {
+    "objectClassName" : "nameserver",
+    "ldhName" : "ns2.example.com",
+    "ipAddresses" :
+    {
+      "v6" : [ "2001:db8::125", "2001:db8::126" ],
+      "v4" : [ "192.0.2.3", "192.0.2.4" ]
+    },
+  }
+]
+```
+
 ## Nameserver
 
 ## IP Network
@@ -74,8 +266,6 @@ RDAP responses.
 ## Autnum
 
 ## Entity Children
-
-## Nameserver Children
 
 ## IP Network Children
 

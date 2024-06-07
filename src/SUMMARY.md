@@ -19,7 +19,7 @@
         // TODO cover 9082 queries
         - [Query Parameters](protocol/query_parameters.md)
         - [URL Paths](protocol/url_paths.md)
-    - [The JSON Data Model](protocol/json.md)
+    - [The JSON Data Model](protocol/json.md)  // TODO add better descriptions of LDH and IDNs
         - [Common Data Structures](protocol/common_data_structures.md)
         - [Object Classes](protocol/object_classes.md)
         - [jCard and vCard](protocol/jcard_and_vcard.md)
@@ -52,6 +52,7 @@
     - [IANA Registries](specifications/iana.md)
 - [Other Documents](misc/other_documents.md)
 - [Glossary](misc/glossary.md)
+  // TODO examples
 
 ---
 
