@@ -4,6 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "A Guide to the Registration Data Access Protocol (RDAP)"
+description = "This book describes the Registration Data Access Protocol, how it works, its ecosystem, and the history behind it."
 
 [preprocessor]
 
@@ -23,3 +24,6 @@ other_variabled_not_in_env= "value"
 
 [output.html]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
+default-theme = "ayu"
+git-repository-url = "https://github.com/anewton1998/rdap_guide"
+edit-url-template = "https://github.com/anewton1998/rdap_guide/edit/main/{path}"
