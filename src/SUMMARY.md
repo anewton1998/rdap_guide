@@ -26,7 +26,7 @@
         // TODO searches
         // TODO errors
         // TODO help
-    - [Extensions](protocol/extensions.md)
+    - [Extending RDAP](protocol/extensions.md)
 - [Finding Servers](bootstrapping/README.md)
     // TOOD mention redirect servers
     - [The IANA Files](bootstrapping/iana.md)

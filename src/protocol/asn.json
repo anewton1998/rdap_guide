@@ -1,0 +1,86 @@
+{
+   "rdapConformance" : [ "rdap_level_0" ],
+   "notices" : [
+      {
+         "description" : [
+            "This is the APNIC WHOIS Database query service. The objects are in RDAP format.",
+            "This information has been partially mirrored by APNIC from IDNIC."
+         ],
+         "links" : [
+            {
+               "href" : "http://www.apnic.net/db/dbcopyright.html",
+               "rel" : "terms-of-service",
+               "type" : "text/html",
+               "value" : "https://idnic.rdap.apnic.net/autnum/64297"
+            }
+         ],
+         "title" : "Terms and Conditions"
+      }
+   ],
+   "objectClassName" : "autnum",
+   "handle" : "AS64297",
+   "startAutnum" : 64297,
+   "endAutnum" : 64297,
+   "name" : "GLOBALMANDIRI-AS-ID",
+   "country" : "ID",
+   "status" : [
+      "active"
+   ],
+   "entities" : [
+      {
+         "handle" : "MYH18-AP",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative",
+            "technical"
+         ],
+         "events" : [
+            { "eventAction" : "registration", "eventDate" : "2019-08-20T06:25:43Z" },
+            { "eventAction" : "last changed", "eventDate" : "2016-10-26T03:33:39Z" }
+         ],
+         "links" : [
+            {
+               "href" : "https://idnic.rdap.apnic.net/entity/MYH18-AP",
+               "rel" : "self",
+               "type" : "application/rdap+json",
+               "value" : "https://idnic.rdap.apnic.net/autnum/64297"
+            }
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [ "version", {}, "text", "4.0" ],
+               [ "fn", {}, "text", "M Yusuf Hamid" ],
+               [ "kind", {}, "text", "individual" ],
+               [ "adr",
+                  {
+                     "label" : "Jl. Muhammadiyah Lr.139 B/24\nMelayu, Wajo\nSulawesi Selatan 90144"
+                  },
+                  "text",
+                  [ "", "", "", "", "", "", "" ]
+               ],
+               [ "email", {}, "text", "noc@globalmandiri.co.id" ]
+            ]
+         ]
+      },
+   ],
+   "events" : [
+      { "eventAction" : "registration", "eventDate" : "2019-08-20T06:30:32Z" },
+      { "eventAction" : "last changed", "eventDate" : "2023-05-03T06:00:56Z" }
+   ],
+   "links" : [
+      {
+         "href" : "https://idnic.rdap.apnic.net/autnum/64297",
+         "rel" : "self",
+         "type" : "application/rdap+json",
+         "value" : "https://idnic.rdap.apnic.net/autnum/64297"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "Send Spam & Abuse reports to: xchange@globallink.net.id"
+         ]
+      }
+   ]
+}

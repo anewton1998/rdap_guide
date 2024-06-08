@@ -22,6 +22,12 @@ the required means of provisioning domains in [gTLDs](#gtld) and is used in some
 This stands for Generic Top-Level Domain, which is a type of [TLD](#tld) operating under contract with ICANN. 
 [[WikiPedia](https://en.wikipedia.org/wiki/Generic_top-level_domain)]
 
+### IANA
+
+The [Internet Assigned Numbers Authority](https://www.iana.org/) is responsible for the allocation of Autonomous System Numbers and IP addresses to the [RIRs](#rir)
+from the pools of these resources created by the [IETF](#ietf), managing the root DNS zones, and managing the registries of protocol elements for the [IETF](#ietf)
+and other organizations.
+
 ### IETF
 
 The [Internet Engineering Task Force](https://ietf.org), or IETF, is one of the main standards setting organizations for Internet standards and is 

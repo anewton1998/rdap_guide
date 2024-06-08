@@ -17,9 +17,9 @@
    },
    "links" : [
       {
-         "href" : "https://rdap-bootstrap.arin.net/bootstrap/nameserver/ns1.xn--fo-5ja.example",
+         "href" : "https://example.com/nameserver/ns1.xn--fo-5ja.example",
          "rel" : "self",
-         "value" : "https://rdap-bootstrap.arin.net/bootstrap/nameserver/ns1.xn--fo-5ja.example"
+         "value" : "https://example.com/nameserver/ns1.xn--fo-5ja.example"
       }
    ],
    "remarks" : [

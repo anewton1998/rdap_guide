@@ -314,7 +314,8 @@ This object class has the following structures:
 |`status`         |a common type defined [here](common_data_structures.md#status)                                            |
 |`port43`         |a common type defined [here](common_data_structures.md#port43)                                            |
 
-The following is an [example](ip-network.json) of an nameserver. Keep in mind that 
+The following is an [example](ip-network.json) of a ip network taken from [APNIC](https://apnic.net) and edited for
+educational purposes. Keep in mind that 
 [`rdapConformance`](common_data_structures.md#rdapconformance) and [`notices`](commond_data_structures.md#notices) are 
 common to all RDAP responses.
 
@@ -323,6 +324,40 @@ common to all RDAP responses.
 ```
 
 ## Autnum
+
+The "autnum" object class represents a registration of a block of [Autonomous System Numbers (ASNs)](https://datatracker.ietf.org/doc/html/rfc1930).
+To some, the fact that they are represented as a block instead of a single ASN may seem odd as it is rare that a network
+is allocated more than one at a time. However, both the [IANA](../misc/glossary.md#iana) and [ARIN](https://arin.net) allocate them
+in blocks, though this is rare for ARIN.
+
+Similar to the [IP Network](#ip-network) object class, these blocks are represented with a `startNum` and an `endNum`.
+
+It has the following structures:
+
+| Name            | Value                                                                                                    |
+|-----------------|----------------------------------------------------------------------------------------------------------|
+|`objectClassName`|(**REQUIRED**) must be "autnum". See [`objectClassName`](common_data_structures.md#objectclassname).      |
+|`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                                      |
+|`startNum`       |a string containing the starting ASN.                                                                     |
+|`endAddress`     |a string containing the ending ASN.                                                                       |
+|`name`           |a name for the registration usually given by the registration holder.                                     |
+|`type`           |a string containing an [RIR](../misc/glossary.md#rir) classification of the registration.                 |
+|`country`        |a string with the ISO 3166-2 Alpha2 country code where the network originates traffic.                    |
+|`entities`       |an array of entity objects. See [entity children](#entity-children).                                      |
+|`remarks`        |a common type defined [here](common_data_structures.md#notices-and-remarks)                               |
+|`links`          |a common type defined [here](common_data_structures.md#links)                                             |
+|`events`         |a common type defined [here](common_data_structures.md#events)                                            |
+|`status`         |a common type defined [here](common_data_structures.md#status)                                            |
+|`port43`         |a common type defined [here](common_data_structures.md#port43)                                            |
+
+The following is an [example](asn.json) of an autnum taken from [APNIC](https://apnic.net) and edited for
+educational purposes. Keep in mind that 
+[`rdapConformance`](common_data_structures.md#rdapconformance) and [`notices`](commond_data_structures.md#notices) are 
+common to all RDAP responses.
+
+```json
+{{#include asn.json}}
+```
 
 ## Entity Children
 
