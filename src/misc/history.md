@@ -55,6 +55,8 @@ goals, the [WEIRDS BoF](https://www.ietf.org/proceedings/82/slides/weirds-0.pdf)
 working group, which then created the RDAP specifications.
 
 ```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
+
 timeline
     title History of Whois and RDAP
     section Pre-RDAP
