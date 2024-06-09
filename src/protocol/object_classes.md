@@ -13,8 +13,54 @@ RDAP defines 5 core object classes:
 * [Autnum](#autnum) - an Autonomous System Number block registration
 
 Object classes are composed of [the common data structures](common_data_structures.md) as well as
-other JSON structures specific to each. Additionally, all of the object classes can have
-[child entities](#entity-children) and some can have [child ip networks](#ip-network-children),
+other JSON structures specific to each. Many of these common structures are repeated in each object class and
+they generally have the following form:
+
+```json
+{
+  "objectClassName" : "different for every object class",
+  "handle" : "registry-unique-id",
+  "status" : [ 
+    // ... 
+  ],
+  "entities" : [
+    // ...  
+  ],
+  "links" : [
+    // ...
+  ],
+  "remarks" : [
+    // ...
+  ],
+  "events" : [
+    // ...
+  ],
+  "port43" : "whois.somewhere"
+
+  // the structures specific to each object class
+  // ...
+}
+```
+
+When objects are returned as the top-most value of the response, such as in responses to
+[lookups](README.md#lookups-and-searches), they would have the [`rdapConformance`](common_data_structures.md#rdapconformance)
+array and optionally some [`notices`](common_data_structures.md#notices-and-remarks).
+
+```json
+{
+  "rdapConformance" : [ "rdap_level_0" ],
+  "notices" : [
+    // ...  
+  ],
+  "objectClassName" : "different for every object class",
+  "handle" : "registry-unique-id",
+
+  // etc, ...
+}
+```
+
+As hinted at above, all of the object classes can have
+[child entities](#entity-children). And some can have [child ip networks](#ip-network-children),
 [child autnums](#autnum-children), and [child nameservers](#nameserver-children).
 The diagram below depicts these relationships.
 
@@ -361,6 +407,78 @@ common to all RDAP responses.
 
 ## Entity Children
 
+As noted above, all objects can have an `entities` value that is an array of [entities](#entity), including an entity.
+This means that [entities](#entity) can be nested, which is useful when showing the relationship between entities.
+
+```json
+{
+  // ...
+  "entities" : [
+    {
+      "objectClassName" : "entity",
+      "handle" : "big-company-1",
+      "roles" : [ "registrant" ],
+      // ...
+      "entities" : [
+        {
+          "objectClassName" : "entity",
+          "handle" : "employee-1",
+          "roles" : [ "technical" ]
+          // ...
+        }
+      ]
+    }  
+  ]
+}
+```
+
 ## IP Network Children
 
+[Entities](#entity) may have multiple [IP network](#ip-network) children. This is used to allow [RIR](../misc/glossary.md#rir)
+members to enumerate the number of networks they hold.
+
+
+```json
+{
+  "objectClassName" : "entity",
+  "networks" : [
+    {
+      "objectClassName" : "ip network",
+      "handle" : "net1"
+      // ...
+    },
+    {
+      "objectClassName" : "ip network",
+      "handle" : "net2"
+      // ...
+    }  
+  ]
+
+  // ...
+}
+```
+
 ## Autnum Children
+
+Similarly, [entities](#entity) may also have [autnum](#autnum) children. Again, this is used to allow [RIR](../misc/glossary.md#rir)
+members to enumerate the number of autnum registrations they hold.
+
+```json
+{
+  "objectClassName" : "entity",
+  "autnums" : [
+    {
+      "objectClassName" : "autnum",
+      "handle" : "asn-1-1"
+      // ...
+    },
+    {
+      "objectClassName" : "autnum",
+      "handle" : "asn-2-1"
+      // ...
+    }  
+  ]
+
+  // ...
+}
+```
