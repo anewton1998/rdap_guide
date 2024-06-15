@@ -43,7 +43,7 @@ they generally have the following form:
 ```
 
 When objects are returned as the top-most value of the response, such as in responses to
-[lookups](README.md#lookups-and-searches), they would have the [`rdapConformance`](common_data_structures.md#rdapconformance)
+[lookups](index.md#lookups-and-searches), they would have the [`rdapConformance`](common_data_structures.md#rdapconformance)
 array and optionally some [`notices`](common_data_structures.md#notices-and-remarks).
 
 ```json

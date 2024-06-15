@@ -112,6 +112,8 @@ The following is an example of an unstructured postal address:
   ]
 ],
 ```
+Note that the unstructured address must have a 7 element array of empty strings as the value
+to conform to the vCard serialization format.
 
 This is an example of the same address in structured form:
 
@@ -132,9 +134,6 @@ This is an example of the same address in structured form:
 ],
 ```
 
-Note that the unstructured address must have a 7 element array of empty strings as the value
-to conform to the vCard serialization format.
-
 The value array for a structured address must be 7 elements exactly, though some may be empty.
 Each position in the array has a specific meaning.
 
@@ -151,6 +150,27 @@ Each position in the array has a specific meaning.
     "QC",            // region (can be either a code or full name)
     "G1V 2M2",       // postal code
     "Canada"         // full country name
+  ]
+],
+```
+
+There is still one more wrinkle with structured addresses: the street address component (item 3, 0-index 2)
+can either be a string or an array of strings. Here the an example:
+
+```json
+[
+  "adr", {}, "text",
+  [
+    "", 
+    "",
+    [                   // street is an array of strings
+      "Country Road 8", 
+      "Mile 29"
+    ],
+    "Waycross",
+    "Georgia",
+    "31501",
+    "United States"
   ]
 ],
 ```

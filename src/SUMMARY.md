@@ -14,11 +14,7 @@
     - [HTTP](protocol/http.md)
         - [Headers](protocol/headers.md)
         - [Response Types](protocol/response_types.md)
-        // TODO combine query parameters and paths into "URLs"
-        // TODO cover base URLs
-        // TODO cover 9082 queries
-        - [Query Parameters](protocol/query_parameters.md)
-        - [URL Paths](protocol/url_paths.md)
+        - [RDAP Urls](protocol/rdap_urls.md)
     - [The JSON Data Model](protocol/json.md)  // TODO add better descriptions of LDH and IDNs
         - [Common Data Structures](protocol/common_data_structures.md)
         - [Object Classes](protocol/object_classes.md)
