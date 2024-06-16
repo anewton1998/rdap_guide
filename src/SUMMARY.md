@@ -19,9 +19,9 @@
         - [Common Data Structures](protocol/common_data_structures.md)
         - [Object Classes](protocol/object_classes.md)
         - [jCard and vCard](protocol/jcard_and_vcard.md)
-        // TODO searches
-        // TODO errors
-        // TODO help
+        - [Search Responses](protocol/search_responses.md)
+        - [Error Responses](protocol/error_responses.md)
+        - [Server Help](protocol/server_help.md)
     - [Extending RDAP](protocol/extensions.md)
 - [Finding Servers](bootstrapping/README.md)
     // TOOD mention redirect servers
