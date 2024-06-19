@@ -44,8 +44,8 @@
     - [RFCs](specifications/rfcs.md)
     - [ICANN](specifications/icann.md)
     - [NRO](specifications/nro.md)
-    - [Other](specifications/other.md)
     - [IANA Registries](specifications/iana.md)
+    - [Other](specifications/other.md)
 - [Other Documents](misc/other_documents.md)
 - [Glossary](misc/glossary.md)
   // TODO examples

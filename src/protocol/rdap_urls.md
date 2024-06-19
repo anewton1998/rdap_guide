@@ -126,6 +126,8 @@ searches. However, the `\*` may only appear once in a domain label.
 
 The `<NAMESERVER IP ADDRESS>` is what it sounds like, either an IPv4 or IPv6 address.
 
+The expected response to a domain search query is a [domainSearchResult](search_responses.md#domain-search-results).
+
 #### Nameserver Searches
 
 Nameserver searches use the `/nameservers` path, and each search type uses a specific query parameter.
@@ -134,6 +136,8 @@ Nameserver searches use the `/nameservers` path, and each search type uses a spe
 * `/nameservers?ip=<NAMESERVER IP ADDRESS>` - searches for nameserver objects by a nameserver IP address.
 
 Here, `<NAMESERVER SEARCH PATTERN>` and `<NAMESERVER IP ADDRESS>` have the same meaning as they do [above](#domain-searches).
+
+The expected response to a nameserver search query is a [nameserverSearchResult](search_responses.md#nameserver-search-results).
 
 #### Entity Searches
 
@@ -144,6 +148,8 @@ Entity searches use the `/entities` path with the following query parameters:
 
 Like the search patterns above, the `<ENTITY NAME SEARCH PATTERN>` and the `<ENTITY HANDLE SEARCH PATTERN>` are partial string
 searches. The only difference is that these are searches are not bounded by domain labels.
+
+The expected response to an entity search query is an [entitySearchResult](search_responses.md#entity-search-results).
 
 ### Server Help
 
