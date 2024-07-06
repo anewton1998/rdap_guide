@@ -1,7 +1,7 @@
 # Server Help
 
 The [`/help` query](rdap_urls.md#server-help) is a psuedo-lookup for server help. It contains
-nothing more than an [`rdapConformance` array](common_data_structures.md#rdapconformance) and
+nothing more than a [`rdapConformance` array](common_data_structures.md#rdapconformance) and
 a [`notices` array](common_data_structures.md#notices-and-remarks).
 
 The following is an example from [RFC 9083](https://datatracker.ietf.org/doc/html/rfc9083#name-responding-to-help-queries):

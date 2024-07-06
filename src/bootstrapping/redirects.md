@@ -1,6 +1,6 @@
 # Redirects
 
-An [HTTP redirect is a type of response](../protocol/response_types.md#redirects) a client recieves from
+An [HTTP redirect is a type of response](../protocol/response_types.md#redirects) a client receives from
 a server when the server wishes the client to send the query elsewhere.
 
 ```svgbob
@@ -14,7 +14,7 @@ a server when the server wishes the client to send the query elsewhere.
 ```
 
 This is used widely among the RIRs to supplement the normal [bootstrapping](iana.md) process
-to accommodate Internet number resources that have been transfered from on RIR to another
+to accommodate Internet number resources that have been transferred from on RIR to another
 (IANA does not record these transfers).
 
 In the following example, a client uses bootstrapping to query LACNIC for 21.1.1.1, however

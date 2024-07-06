@@ -40,8 +40,8 @@ The next section shows the HTTP response.
 {{#include http_example_com.out:9:16}}    
 ```
 Here, the important parts to note are the media type in the `content-type` header, which uses the RDAP media type,
-and the `access-control-allow-origin` header, which is used to allow web browsers to run Javascript sourced from one
-web site to use the RDAP content from an RDAP HTTP server.
+and the `access-control-allow-origin` header, which is used to allow web browsers to run JavaScript sourced from one
+website to use the RDAP content from an RDAP HTTP server.
 
 Next, the JSON returned can be broken down as follows. The first part is the "entity", which is the contact for the domain:
 
@@ -76,10 +76,10 @@ Next are notices from the server operator:
 ```
 
 Next, the following is given:
-1. the type of the object being returned is given. This is used by clients to determine the type of object being returned.
-1. the `rdapConformance` array, which lists the extensions in use by the RDAP server.
-1. the data signifying if `example.com` is signed in the DNS (i.e. DNSSEC).
-1. the status of the domain, which is active.
+1. The type of the object being returned is given. This is used by clients to determine the type of object being returned.
+1. The `rdapConformance` array, which lists the extensions in use by the RDAP server.
+1. The data signifying if `example.com` is signed in the DNS (i.e. DNSSEC).
+1. The status of the domain, which is active.
 
 ```json
 {{#include http_example_com.out:97:106}}    

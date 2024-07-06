@@ -4,8 +4,8 @@
 a server might send. These types are categorized by the HTTP status code sent back to a client. This RFC describes some
 specific scenarios but does not preclude other status codes as defined by HTTP. 
 
-Much of this may seem obvious today, but whent the RFC was being specified there were many questions in the IETF
-as to how REST-ful services were to work, especially given a somewhat known operational model for Whois.
+Much of this may seem obvious today, but when the RFC was being specified there were many questions in the IETF
+as to how RESTful services were to work, especially given a somewhat known operational model for Whois.
 Simply put, the descriptions in this RFC are provided to help implementers bridge the gap from Whois to RDAP.
 
 ## Positive Answers
@@ -57,7 +57,7 @@ respond at all.
 
 There are many cases in which an RDAP server returns a redirect, especially the [RIRs](../misc/glossary.md#rir).
 [RFC 7480](https://datatracker.ietf.org/doc/html/rfc7480#section-5) does not specify which is
-appropriate to use leaving that decision up to the server operator. The RFC simply lists the availabe
+appropriate to use leaving that decision up to the server operator. The RFC simply lists the available
 types of redirects:
 
 * 301 (MOVED PERMANENTLY)

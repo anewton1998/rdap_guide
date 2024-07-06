@@ -19,7 +19,7 @@ and [RDAP.ORG](https://rdap.org), the latter of which [reports](https://mailarch
 
 The title of [RFC 9224](https://datatracker.ietf.org/doc/html/rfc9224), "Finding the Authoritative Registration Data Access Protocol (RDAP) Service"
 is misleading in that the RFC only describes the discovery of RDAP sources registered with [IANA](../glossary.md#iana). Important as those sources
-may be, they are not "authoritative" for second and third level domain registries (e.g. co.uk), IP addresses and Automous System Numbers transfered
+may be, they are not "authoritative" for second and third level domain registries (e.g. co.uk), IP addresses and Autonomous System Numbers transferred
 between [RIRs](../glossary.md#rir), number resources of [NIRs](../glossary.md#nir) and [LIRs](../glossary.md#lir), and domain contacts of "thin" TLDs
 where the information resides solely at a domain registrar.
 
@@ -97,4 +97,4 @@ In more simple terms, this means identifying a suffix on a string is an object t
 the server for it. For example, an entity with a handle of "FOO-ARIN" can be found in the ARIN RDAP server
 because the handle name is suffixed by "-ARIN".
 
-Object tags can also be used to direct clients at RDAP services using "short names". Neither usage is in wide spread use.
+Object tags can also be used to direct clients at RDAP services using "short names". Neither usage is in widespread use.

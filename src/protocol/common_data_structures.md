@@ -16,7 +16,7 @@ in the [object classes](protocol/object_classes.md). These are:
 ## The RDAP Conformance Array {#rdapconformance}
 
 This is a special array that must only appear in the top most JSON of an RDAP
-response. It is used by a server to signal to a client the RDAP verion supported
+response. It is used by a server to signal to a client the RDAP version supported
 by the server (there is only one) and any extensions.
 
 ```json
@@ -248,7 +248,7 @@ values depending on the object class being represented:
 * entity
 * nameserver
 
-This string is the descriminator used by clients when parsing the JSON object into an RDAP object class.
+This string is the discriminator used by clients when parsing the JSON object into an RDAP object class.
 
 
 ```json

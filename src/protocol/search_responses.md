@@ -9,7 +9,7 @@ in the array.
 | nameserverSearchResults | nameserver   |
 | entitySearchResults     | entity       |
 
-Note that each search result is **required** to have an [`rdapConformance` array](common_data_structures.md#rdapconformance)
+Note that each search result is **required** to have a [`rdapConformance` array](common_data_structures.md#rdapconformance)
 and may have a [`notices` array](common_data_structures.md#notices-and-remarks).
 
 ## Domain Search Results
@@ -66,7 +66,7 @@ Nameserver search results are the proper response to a [nameserver search query]
 
 ## Entity Search Results
 
-Entity search results are the proper response to a [entity search query](rdap_urls.md#entity-searches):
+Entity search results are the proper response to an [entity search query](rdap_urls.md#entity-searches):
 
 ```json
 {

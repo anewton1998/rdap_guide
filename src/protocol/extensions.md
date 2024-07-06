@@ -6,9 +6,9 @@ character and may contain any combination of alphabetic characters,
 numeric characters (digits), and the underscore ("_") character.
 
 These extension identifiers are:
-1. prepended to the names of JSON values.
-1. preceed path segments in URLs.
-1. placed in the RDAP conformance array.
+1. Prepended to the names of JSON values.
+1. Precede path segments in URLs.
+1. Placed in the RDAP conformance array.
 
 As simple as this sounds, some of these rules have been bent over the
 years causing some ambiguity. The [IETF is currently working](https://datatracker.ietf.org/doc/draft-ietf-regext-rdap-extensions/) 
@@ -46,7 +46,7 @@ Left unsaid by the RFC, this is an example of the extension defining JSON that
 augments JSON defined by the core of RDAP. See [the example](#urls) below for
 the definition of a new object class by the extension.
 
-In essense, the extension identifier prepends any JSON the extension defines.
+In essence, the extension identifier prepends any JSON the extension defines.
 
 ```svgbob
 .-----------------------------------------------.

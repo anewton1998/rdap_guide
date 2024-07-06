@@ -11,10 +11,10 @@ upwards of 700 million queries per month. And <https://rdap.org>, which is a red
 and not an authoritative server, [reports](https://mailarchive.ietf.org/arch/msg/regext/ElTMpcFDeZ_L43U9UbKqaBowjak/)
 daily query rates of 10 million (approximately 300 million per month).
 
-In terms of web traffic, any web sites pulling in 300 million monthly hits would be in the top 50 of the world.
+In terms of web traffic, any websites pulling in 300 million monthly hits would be in the top 50 of the world.
 If RDAP was pulling in anywhere close to this many eyeballs, we would all know it.
 
-Therefore these queries are from "bots" or more plainly said, scripts. This is stated in [RFC 7480, Section 3](https://datatracker.ietf.org/doc/html/rfc7480#section-1):
+Therefore, these queries are from "bots" or more plainly said, scripts. This is stated in [RFC 7480, Section 3](https://datatracker.ietf.org/doc/html/rfc7480#section-1):
 
 > A client implementation should be possible using 
 > common operating system scripting tools 
@@ -47,10 +47,10 @@ How does this work? First, the script pipes the inventory text file into a loop 
 for each IP address. Then `curl` pipes its output to `jq` which appends the information to the CSV file.
 
 Here is what to note about the `curl` command:
-1. the `-s` suppresses progress output so only JSON is passed to `jq`.
-1. the `accept` header is set to the RDAP media type.
-1. the target is a bootstrap server that redirects queries to the appropriate authoritative server.
-1. the `-L` instructs `curl` to follow redirects.
+1. The `-s` suppresses progress output so only JSON is passed to `jq`.
+1. The `accept` header is set to the RDAP media type.
+1. The target is a bootstrap server that redirects queries to the appropriate authoritative server.
+1. The `-L` instructs `curl` to follow redirects.
 
 These last two items are important to understand. The set of IP addresses are not all registered with the
 same RIR, yet the script has no logic to find the right server to query. Instead, all queries are sent

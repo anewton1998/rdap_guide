@@ -6,7 +6,7 @@ has this wording:
 > This document only describes how RDAP is transported using HTTP with this format.
 
 Some may interpret that sentence to mean RDAP is only defined over HTTP, which is true, but
-it could also be intepretted to mean that another RFC may define RDAP over another transport,
+it could also be interpreted to mean that another RFC may define RDAP over another transport,
 which could also be true (in the future).
 
 However, RDAP is intrinsically tied to being used over HTTP. While it may be possible to map RDAP onto
@@ -21,7 +21,7 @@ in both Sections 4 and 7.
 
 This wording does not preclude the use of insecure HTTP, though at the time of ratification
 of RFC 7480 the [IESG](https://www.ietf.org/about/groups/iesg/) asked for the use of HTTPS
-to be manditory. It was not made mandatory at the time due to known issues with load balancers.
+to be mandatory. It was not made mandatory at the time due to known issues with load balancers.
 Should the IETF ever revisit this requirement, it almost certainly would mandate usage of HTTPS.
 
 Therefore, it is best that all production deployments support HTTPS and redirect all insecure HTTP
@@ -68,10 +68,10 @@ Even with TLS 1.3, there are a few precautions both clients and servers should t
 ### TLS 1.3 Early Data
 
 TLS 1.3 has a feature known as "Early Data" or zero round-trip time (0-RTT). How this feature is used
-with HTTP is defiend in [RFC 8470](https://datatracker.ietf.org/doc/html/rfc8470), which describes
+with HTTP is defined in [RFC 8470](https://datatracker.ietf.org/doc/html/rfc8470), which describes
 a few measures to thwart replay attacks.
 
-AS RDAP has no PUT, POST, DELETE, and PATCH methods and is only a data retreival protocol for (mostly)
+AS RDAP has no PUT, POST, DELETE, and PATCH methods and is only a data retrieval protocol for (mostly)
 public data, replay attacks are not usually of great concern. However, RDAP server operators using authorization
 to provided differentiated access to RDAP data should take the precautions outlined in 
 [RFC 8470](https://datatracker.ietf.org/doc/html/rfc8470).
@@ -93,18 +93,18 @@ support TLSA nor are there any known RDAP clients using TLSA. Additionally, the 
 of TLSA with HTTP as it has done with [SMTP](https://datatracker.ietf.org/doc/html/rfc7672). As outlined in this
 [slide presentation from Shumon Huque](https://indico.dns-oarc.net/event/43/contributions/928/attachments/901/1648/dane-overview-shumon.pdf),
 HTTP using protocols have a series of challenges for which TLSA is not ideal. Though not yet a standard, [RFC 9102](https://datatracker.ietf.org/doc/html/rfc9102)
-describes an expirmental feature of TLS to use DANE without TLSA.
+describes an experimental feature of TLS to use DANE without TLSA.
 
 Should an RDAP service wish to use TLSA, the following suggests are made in the absence of any other HTTP or RDAP specific
 TLSA guidelines:
 * Certificate usage should be 3 (DANE-EE) which identifies the certificate in use by the RDAP server.
 * Selector should be 1 (SPKI) which ties the TLSA record to the Subject Public Key Identifier of the 
 certificate thus avoiding the need to refresh the TLSA record when the certificate is re-issued unless it is also re-keyed.
-* Matching type should be 1 (SHA-256) as SHA-512 is not manditory to implement by DNSSEC client libraries.
+* Matching type should be 1 (SHA-256) as SHA-512 is not mandatory to implement by DNSSEC client libraries.
 
 Client implementers wishing to support TLSA should be aware of the requirements to do so, which are:
 1. Either the client is to fully validate DNSSEC records or is to have a secure channel to a DNS resolver which does so.
 2. There may be multiple TLSA records, so each record must be evaluated until one is found to work.
-3. If no TLSA records are found to work, the TLS handshake must fall-back to normal certificate validation.
+3. If no TLSA records are found to work, the TLS handshake must fall back to normal certificate validation.
 
 

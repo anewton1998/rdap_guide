@@ -1,4 +1,4 @@
-# RDAP Urls
+# RDAP URLs
 
 RDAP does not define its own URI scheme. It simply uses the "https" (and sometimes "http") URI schemes because
 RDAP takes advantage of all the features HTTP has to offer. This is one of the major contrasts between RDAP and
@@ -7,8 +7,8 @@ its own URI scheme.
 
 ---
 
-The distinction between a URI and a URL is beyond the scope of this document. For simplicity, a URI is a super type
-of a URL (and URN). That is, a URL is a type of URI. With regards to HTTP and RDAP specifically, the terms can be
+The distinction between a URI and a URL is beyond the scope of this document. For simplicity, a URI is a super type of 
+URL (and URN). That is, a URL is a type of URI. With regard to HTTP and RDAP specifically, the terms can be
 used interchangeably.
 
 ---
@@ -81,7 +81,7 @@ Domain lookups use the `/domain` path for fully qualified ASCII and IDN domains 
 
 #### Nameserver Lookups
 
-For registries and registrars following the "host object" model (see [namserver server children](object_classes.html#nameserver-children)), nameservers
+For registries and registrars following the "host object" model (see [nameserver server children](object_classes.html#nameserver-children)), nameservers
 may be queried using their fully qualified host name with the `/nameserver` path:
 
 ~~~
@@ -109,7 +109,7 @@ Searches are not as thoroughly implemented as lookups.
 
 #### Domain Searches
 
-Domain searches use the `/domains` path, and each search type uses a specific query paramter.
+Domain searches use the `/domains` path, and each search type uses a specific query parameter.
 
 * `/domains?name=<DOMAIN SEARCH PATTERN>` - searches for domain registrations by a domain name search pattern.
 * `/domains?nsLdhName=<NAMESERVER SEARCH PATTERN>` - searches for domain registrations by a nameserver host name search pattern of a domain.
@@ -155,8 +155,8 @@ The expected response to an entity search query is an [entitySearchResult](searc
 
 RDAP defines one psuedo-lookup for server help. This simply uses the `/help` path and produces a [help response](server_help.md).
 
-## Unknown Query Paramters
+## Unknown Query Parameters
 
-In RDAP, clients may attach "unknown" query paramters (i.e. undefined query parameters) for the purposes of "cache busting"
-(see [RFC 7480 Appendix B](https://datatracker.ietf.org/doc/html/rfc7480#appendix-B)). Server are to ignore unknown query
+In RDAP, clients may attach "unknown" query parameters (i.e. undefined query parameters) for the purposes of "cache busting"
+(see [RFC 7480 Appendix B](https://datatracker.ietf.org/doc/html/rfc7480#appendix-B)). Servers are to ignore unknown query
 parameters, which also means they should not put them in redirects unless for a well-defined and intentional purpose.

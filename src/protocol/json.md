@@ -2,7 +2,7 @@
 
 The JSON used in RDAP is defined in [RFC 9083](https://datatracker.ietf.org/doc/rfc9083/).
 This JSON is described in two broad categories, common data types and object classes.
-An object class defines registrations in a registry and they are definitions commonly
+An object class defines registrations in a registry, and they are definitions commonly
 found among those definitions are the common data types.
 
 [RFC 9083](https://datatracker.ietf.org/doc/rfc9083/) also defines arrays for the
@@ -27,7 +27,7 @@ take note:
 
 ### handle
 
-A handle is just a reference, often an opague one (i.e. without meaning). This
+A handle is just a reference, often an opaque one (i.e. without meaning). This
 term comes for the older Whois era in which registrations at the InterNIC were
 identified by a "handle".
 
@@ -52,10 +52,10 @@ for parsing and, with some wrapping, serializing.
 
 Here are some examples:
 
-* `1990-12-31T23:59:59Z` - 31st of December, 1990, at 1 second before midnight.
+* `1990-12-31T23:59:59Z` - 31st of December 1990, at 1 second before midnight.
 * `1990-12-31T23:59:60Z` - a leap second at the end of 1990.
 * `1996-12-19T16:39:57-08:00` - a date and time offset from UTC by -8 hours.
 
 The benefit of using [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339)
-date and time values is that they are somewhat readable to most humans but they
+date and time values is that they are somewhat readable to most humans, but they
 also can be sorted alphabetically. 

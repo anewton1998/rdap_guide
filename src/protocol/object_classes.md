@@ -1,6 +1,6 @@
 # Object Classes
 
-In RDAP, the information being queried is an RDAP object, and the types or classes of those object are known
+In RDAP, the information being queried is an RDAP object, and the types or classes of those objects are known
 as object classes. They are defined in [RFC 9083](https://datatracker.ietf.org/doc/html/rfc9083). Each
 instance of an object class is **REQUIRED** to have the [`objectClassName`](common_data_structures.md#objectclassname)
 attribute.
@@ -13,7 +13,7 @@ RDAP defines 5 core object classes:
 * [Autnum](#autnum) - an Autonomous System Number block registration
 
 Object classes are composed of [the common data structures](common_data_structures.md) as well as
-other JSON structures specific to each. Many of these common structures are repeated in each object class and
+other JSON structures specific to each. Many of these common structures are repeated in each object class, and
 they generally have the following form:
 
 ```json
@@ -59,8 +59,8 @@ array and optionally some [`notices`](common_data_structures.md#notices-and-rema
 }
 ```
 
-As hinted at above, all of the object classes can have
-[child entities](#entity-children). And some can have [child ip networks](#ip-network-children),
+As hinted at above, all the object classes can have
+[child entities](#entity-children). And some can have [child IP networks](#ip-network-children),
 [child autnums](#autnum-children), and [child nameservers](#nameserver-children).
 The diagram below depicts these relationships.
 
@@ -102,7 +102,7 @@ The entity object class has the following JSON data structures:
 |`status`         |a common type defined [here](common_data_structures.md#status)                                             |
 |`port43`         |a common type defined [here](common_data_structures.md#port43)                                             |
 |`networks`       |an array of [IP networks](#ip_network). See [IP network children](#ip-network-children).                   |
-|`autnums`        |an array of [autnums](#autnum). See [autnum childre](#autnum-children).                                    |
+|`autnums`        |an array of [autnums](#autnum). See [autnum children](#autnum-children).                                    |
 
 The following is a contrived [example](entity-dnr.json) of an entity. Keep in mind that 
 [`rdapConformance`](common_data_structures.md#rdapconformance) and
@@ -212,7 +212,7 @@ domain name itself using the [`links`](common_data_structures.md#links) and [`ev
 |`keyTag`          |the integer of the key tag field of a DS record.                                               |
 |`algorithm`       |the integer of the algorithm field of a DS record.                                             |
 |`digest`          |string containing the hexadecimal digest of the DS record.                                     |
-|`digestType`      |the integer of the digest type of a DS record.                                                 |
+|`digestType`      |the integer of the digest type of DS record.                                                   |
 |`links`           |a common type defined [here](common_data_structures.md#links)                                  |
 |`events`          |a common type defined [here](common_data_structures.md#events)                                 |
 
@@ -280,7 +280,7 @@ a `handle` or other meta-data separate from the domain. The following is an exam
 ]
 ```
 
-Some times they may include the IP addresses of the nameservers.
+Sometimes they may include the IP addresses of the nameservers.
 
 ```json
 "nameserver" : [
@@ -327,7 +327,7 @@ The nameserver object class has the following structures:
 |`status`         |a common type defined [here](common_data_structures.md#status)                                            |
 |`port43`         |a common type defined [here](common_data_structures.md#port43)                                            |
 
-The following is a contrived [example](ns.json) of an nameserver. Keep in mind that 
+The following is a contrived [example](ns.json) of a nameserver. Keep in mind that 
 [`rdapConformance`](common_data_structures.md#rdapconformance) is common to all RDAP responses.
 
 ```json
@@ -360,7 +360,7 @@ This object class has the following structures:
 |`status`         |a common type defined [here](common_data_structures.md#status)                                            |
 |`port43`         |a common type defined [here](common_data_structures.md#port43)                                            |
 
-The following is an [example](ip-network.json) of a ip network taken from [APNIC](https://apnic.net) and edited for
+The following is an [example](ip-network.json) of an IP network taken from [APNIC](https://apnic.net) and edited for
 educational purposes. Keep in mind that 
 [`rdapConformance`](common_data_structures.md#rdapconformance) and [`notices`](commond_data_structures.md#notices) are 
 common to all RDAP responses.
@@ -376,7 +376,7 @@ To some, the fact that they are represented as a block instead of a single ASN m
 is allocated more than one at a time. However, both the [IANA](../misc/glossary.md#iana) and [ARIN](https://arin.net) allocate them
 in blocks, though this is rare for ARIN.
 
-Similar to the [IP Network](#ip-network) object class, these blocks are represented with a `startNum` and an `endNum`.
+Similar to the [IP Network](#ip-network) object class, these blocks are represented with a `startNum` and a `endNum`.
 
 It has the following structures:
 
@@ -407,7 +407,7 @@ common to all RDAP responses.
 
 ## Entity Children
 
-As noted above, all objects can have an `entities` value that is an array of [entities](#entity), including an entity.
+As noted above, all objects can have a `entities` value that is an array of [entities](#entity), including an entity.
 This means that [entities](#entity) can be nested, which is useful when showing the relationship between entities.
 
 ```json
