@@ -25,7 +25,7 @@
     - [Extending RDAP](protocol/extensions.md)
 - [Finding Servers](bootstrapping/README.md)
     // TOOD mention redirect servers
-    - [The IANA Files](bootstrapping/iana.md)
+    - [Bootstrapping](bootstrapping/iana.md)
     - [Redirects](bootstrapping/redirects.md)
     - [Referrals](bootstrapping/referrals.md)
 

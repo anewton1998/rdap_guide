@@ -42,6 +42,16 @@ INRs are composed of [RIRs](#rir) but also Local Internet Registries (LIRs) and 
 
 jCard is the JSON version of the [vCard](#vcard) standard, which defines the details of a contact. It is standardized in [RFC 7095](https://datatracker.ietf.org/doc/html/rfc7095).
 
+### LIR
+
+A "Local Internet Regitry", sometimes known as an Internet Service Provider (ISP), receives number resources from another [INR](#inr) for
+re-allocation to customers.
+
+### NIR
+
+A "National Internet Registry" is an [INR](#inr) that receives Internet number resources from an [RIR](#rir) for redistribution in a specific
+country or economy.
+
 ### NRO
 
 The [Number Resource Organization](https://www.nro.net/) is a coordination group for the [RIRs](#rir).
