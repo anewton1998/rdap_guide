@@ -6,6 +6,8 @@
 ---
 
 - [Uses of RDAP](misc/uses.md)
+    - [Bash: Finding IP Networks](misc/finding_ip_networks.md)
+    - [Python: Finding Protected Domains](misc/finding_protected_domains.md)
     // TODO scripting examples
     // put bash scripting example under here
     // python example to accept a list of domain names and find the ones not DNSSEC
@@ -24,7 +26,6 @@
         - [Server Help](protocol/server_help.md)
     - [Extending RDAP](protocol/extensions.md)
 - [Finding Servers](bootstrapping/README.md)
-    // TOOD mention redirect servers
     - [Bootstrapping](bootstrapping/iana.md)
     - [Redirects](bootstrapping/redirects.md)
     - [Referrals](bootstrapping/referrals.md)
@@ -45,7 +46,7 @@
     - [ICANN](specifications/icann.md)
     - [NRO](specifications/nro.md)
     - [IANA Registries](specifications/iana.md)
-    - [Other](specifications/other.md)
+    // - [Other](specifications/other.md)
 - [Other Documents](misc/other_documents.md)
 - [Glossary](misc/glossary.md)
   // TODO examples
