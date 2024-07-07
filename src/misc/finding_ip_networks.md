@@ -10,7 +10,8 @@ of finding their registered CIDR blocks, perhaps for creating an access control 
 You have been asked to provide this information in a CSV file.
 
 Using a simple [bash](https://www.gnu.org/software/bash/) script, the [curl](https://curl.se/) command,
-and [jq](https://jqlang.github.io/jq/), you come up with this very simple solution:
+and [jq](https://jqlang.github.io/jq/), you come up with this very simple solution
+(source code is [here](https://github.com/anewton1998/rdap_guide/tree/main/src/examples/clients/bash_curl_jq)):
 
 
 ```bash

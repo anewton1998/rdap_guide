@@ -48,7 +48,7 @@ Contributions to this book are welcome. See [Contributing](misc/contributing.md)
 
 ## Copyright
 
-Copyright (C) 2024 Andrew Newton
+Copyright (C) 2024 Andrew Newton and contributors.
 
 ## License
 

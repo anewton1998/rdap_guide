@@ -8,7 +8,7 @@ This can be accomplished using the [`status`](http://localhost:3000/protocol/com
 array of a domain, and if the domain does not have the right set of status values
 then the domain's registrar should be contacted.
 
-Here is a simple Python script to do this (source code is [here](../examples/clients/python_whoisit/)):
+Here is a simple Python script to do this (source code is [here](https://github.com/anewton1998/rdap_guide/tree/main/src/examples/clients/python_whoisit)):
 
 ```python
 {{#include ../examples/clients/python_whoisit/main.py}}
