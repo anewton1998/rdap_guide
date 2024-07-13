@@ -6,6 +6,12 @@ and [Redirects](../bootstrapping/iana.md).
 
 ## Services
 
+### ARIN RDAP Bootstrap Server
+
+* Base RDAP URL: <https://rdap-bootstrap.arin/net/bootstrap>
+* More Information: <https://www.arin.net/resources/registry/whois/rdap/>
+* Related: [Software](#rdap-bootstrap-server)
+
 ### RDAP.Net
 
 * Base RDAP URL: <https://www.rdap.net>
@@ -20,6 +26,20 @@ and [Redirects](../bootstrapping/iana.md).
 * Related: [Software](#rdaporg)
 
 ## Software
+
+### RDAP Bootstrap Server
+
+From the GitHub Repository:
+
+> The Registration Data Access Protocol (RDAP) defines a bootstrapping process in RFC 7484. 
+> A bootstrap server aids clients by reading the bootstrapping information published by IANA 
+> and using it to send HTTP redirects to RDAP queries. Clients utilizing a bootstrap server 
+> will not need to conduct their own bootstrapping.
+
+* License: ISC License
+* Repository: <https://github.com/arineng/rdap_bootstrap_server>
+* Language: Java
+* Related: [Service](#arin-rdap-bootstrap-server)
 
 ### RDAP.Org
 

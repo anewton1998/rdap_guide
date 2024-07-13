@@ -2,6 +2,11 @@
 
 ## Research Papers
 
+### Implementation and Utilities of RDAP for Wider Usability among Internet Stakeholders
+* Prof. TS. Dr. Miss Laiha Binti Mat Kiah, Ali Hussain, Mahi Uddin
+* University of Malaya, Faculty of Computer Science & Information Technology, Jalan Universiti, 50603, Wilayah Persekutuan Kuala Lumpur, Malaysia
+* <https://apnic.foundation/projects/implementation-and-utilites-of-rdap-for-wider-usability-among-internet-stakeholders/technicalreport/>
+
 ### WHOIS Right? An Analysis of WHOIS and RDAP Consistency
 * Simon Fernandez, Olivier Hureau, Andrzej Duda, and Maciej Korczynski
 * Univ. Grenoble Alpes, Grenoble INP, LIG
