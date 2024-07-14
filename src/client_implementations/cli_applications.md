@@ -3,6 +3,28 @@
 Command-Line Interface (CLI) clients have a heritage that goes back to original WHOIS,
 which was accessed via clients run on Unix systems.
 
+## ICAN RDAP CLI
+
+From the GitHub Repository:
+
+> This is a command-line interface (CLI) client for the Registration Data Access Protocol (RDAP) written and sponsored
+> by the Internet Corporation for Assigned Names and Numbers [(ICANN)](https://www.icann.org). 
+> RDAP is standard of the [IETF](https://ietf.org/), and extensions
+> to RDAP are a current work activity of the IETF's [REGEXT working group](https://datatracker.ietf.org/wg/regext/documents/).
+> More information on ICANN's role in RDAP can be found [here](https://www.icann.org/rdap).
+
+* License: MIT, Apache License 2.0
+* Repository: <https://github.com/icann/icann-rdap>
+* Language: Rust
+* Operating Systems: MacOS, Linux, Windows
+* Related: [Client Library](libraries.md#icann-rdap-client-library), [Authoritative Server](../server_implementations/authoritative.md#icann-rdap-server), [Redirect Server](../server_implementations/redirect.md#icann-rdap-server)
+* Features:
+  * Caching
+  * Bootstrapping
+  * Output Paging
+
+![ICANN RDAP CLI](icann-rdap-cli.png)
+
 ## NicInfo
 
 From the GitHub Repository:
@@ -61,3 +83,33 @@ From OpenRDAP.org:
   * X.509 client authentication
 
 ![OpenRDAP Querying Google.com](openrdap-google.com.png)
+
+### RDAP Check
+
+> A simple library and command-line tool to check domain name availability in bulk using the RDAP protocol, a simple protocol meant to replace WHOIS.
+
+* Package Information: <https://deno.land/x/rdapcheck@v0.1.1>
+* Repository: <https://github.com/Gadiguibou/rdapcheck>
+* Documentation: <https://deno.land/x/rdapcheck@v0.1.1?doc>
+* License: AGPL-3.0
+* Related: [Client Library](libraries.md#rdap-check)
+
+![RDAP Check](rdap-check.png)
+
+### rdapper
+
+> `rdapper` is a simple RDAP client. It uses [Net::RDAP](https://metacpan.org/pod/Net%3A%3ARDAP) to retrieve
+> data about internet resources (domain names, IP addresses, and
+> autonymous systems) and outputs the information in a human-readable
+> format. If you want to consume this data in your own program you
+> should use [Net::RDAP](https://metacpan.org/pod/Net%3A%3ARDAP) directly.
+> 
+> `rdapper` was originally conceived as a full RDAP client (back
+> when the RDAP specification was still in draft form) but is now
+> just a very thin front-end to [Net::RDAP](https://metacpan.org/pod/Net%3A%3ARDAP).
+
+* Package Information: <https://metacpan.org/pod/App::rdapper>
+* Repository: <https://github.com/gbxyz/rdapper>
+* Documentation: <https://metacpan.org/pod/App::rdapper>
+* License: Unknown Open Source
+* Related: [Client Library](libraries.md#netrdap)

@@ -6,6 +6,7 @@ and [Redirects](../bootstrapping/iana.md).
 
 ## Services
 
+
 ### ARIN RDAP Bootstrap Server
 
 * Base RDAP URL: <https://rdap-bootstrap.arin/net/bootstrap>
@@ -26,6 +27,26 @@ and [Redirects](../bootstrapping/iana.md).
 * Related: [Software](#rdaporg)
 
 ## Software
+
+### APNIC rdap-ingressd
+
+> *rdap-ingressd* is a proxy and redirection server for the RDAP
+> protocol.  It receives RDAP queries from clients and routes the
+> requests to the appropriate RDAP service by either:
+> 
+> 1. HTTP 301 redirect; or
+> 2. Proxying the request to another RDAP service and returning the result.
+
+* License: BSD
+* Repository: <https://github.com/APNIC-net/rdap-ingressd>
+* Language: Java
+
+### ICANN RDAP Server
+
+* License: MIT, Apache License 2.0
+* Repository: <https://github.com/icann/icann-rdap>
+* Language: Rust
+* Related: [Client Library](../client_implementations/libraries.md#icann-rdap-client-library), [CLI Application](../client_implementations/cli_applications.md#ican-rdap-cli), [Authoritative Server](authoritative.md#icann-rdap-server)
 
 ### RDAP Bootstrap Server
 
