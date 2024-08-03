@@ -4,7 +4,52 @@ Client libraries can be embedded into other programs to give them
 the ability to query RDAP. These libraries are categorized by programming
 language.
 
+## GO
+
+### RegistroBR
+
+* Package Information: <https://pkg.go.dev/github.com/registrobr/rdap/protocol>
+* Repository: <https://github.com/registrobr/rdap>
+* Documentation: <https://pkg.go.dev/github.com/registrobr/rdap/protocol#section-documentation>
+* License: Unknown Open Source
+
+### Who-Go
+
+* Package Information: <https://pkg.go.dev/github.com/darkqiank/whois>
+* Repository: <github.com/darkqiank/whois>
+* Documentation: <https://pkg.go.dev/github.com/darkqiank/whois#section-documentation>
+* License: Apache 2.0
+
+## Java
+
+### rdap-client
+
+* Repository: <https://github.com/dzh/rdap-client>
+* License: Apache 2.0
+
+### rdap-java
+
+* Package Information: <https://central.sonatype.com/artifact/cc.maria.rdap-java/rdap-java>
+* Repository: <https://github.com/MariaMerkel/rdap-java>
+* License: Apache 2.0
+
 ## Other
+
+### Prometheus
+
+#### adamdecaf rdap_exporter
+
+* Package Information: <https://pkg.go.dev/github.com/adamdecaf/rdap_exporter>
+* Repository: <https://github.com/adamdecaf/rdap_exporter>
+* Documentation: <https://pkg.go.dev/github.com/adamdecaf/rdap_exporter#section-documentation>
+* License: MIT
+
+#### hsn723 rdap_exporter
+
+* Package Information: <https://pkg.go.dev/github.com/hsn723/rdap-exporter>
+* Repository: <github.com/hsn723/rdap-exporter>
+* Documentation: <https://pkg.go.dev/github.com/hsn723/rdap-exporter#section-documentation>
+* License: MIT
 
 ### Rapid7
 
@@ -50,6 +95,16 @@ language.
 
 ## PHP
 
+### Array Access RDAP Client
+
+* Repository: <https://github.com/ArrayAccess/RDAP-Client>
+* License: GPL 3.0
+
+### Meta Registrar RDAP Client
+
+* Repository: <https://github.com/metaregistrar/rdap-client>
+* License: GPL 2.0
+
 ### RDAP Whois Proxy
 
 > A bridge from WHOIS to RDAP
@@ -58,6 +113,27 @@ language.
 * License: BSD 3-Clause
 
 ## Python
+
+### IPWhois
+
+* Package Information: <https://pypi.org/project/ipwhois/>
+* Repository: <https://github.com/secynic/ipwhois>
+* Documentation: <https://ipwhois.readthedocs.io/en/latest>
+* License: BSD 2-Clause
+* Related: [CLI Application](cli_applications.html#ipwhois)
+
+### Whodap
+
+> whodap | Simple RDAP Utility for Python
+> 
+> Support for asyncio HTTP requests (httpx)
+> Leverages the SimpleNamespace type for cleaner RDAP Response traversal
+> Keeps the familiar look of WHOIS via the to_whois_dict method for DNS lookups
+
+* Package Information: <https://pypi.org/project/whodap/>
+* Repository: <https://github.com/pogzyb/whodap>
+* Documentation: <https://pypi.org/project/whodap/>
+* License: MIT
 
 ### Whoisit
 
@@ -72,10 +148,21 @@ language.
 > information from the RDAP responses is extensive enough that a library like this is
 > useful.
 
-Packine Information: <https://pypi.org/project/whoisit/>
-Repository: <https://github.com/meeb/whoisit>
-Documentation: <https://pypi.org/project/whoisit/>
-License: BSD 3-Clause
+* Package Information: <https://pypi.org/project/whoisit/>
+* Repository: <https://github.com/meeb/whoisit>
+* Documentation: <https://pypi.org/project/whoisit/>
+* License: BSD 3-Clause
+
+## Ruby
+
+## RDAP
+
+> A minimal Ruby client to query RDAP APIs though a bootstrap server. No dependencies, no caching or bootstrap file (the query is routed through a bootstrap server first).
+
+* Package Information: <https://rubygems.org/gems/rdap>
+* Repository: <https://github.com/jarthod/rdap>
+* Documentation: <https://www.rubydoc.info/gems/rdap/0.1.5>
+* License: Unspecified
 
 ## Rust
 

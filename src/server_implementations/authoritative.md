@@ -1,5 +1,11 @@
 # Authoritative Servers
 
+## CNNIC RDAP Proxy43
+
+* License: Unspecified
+* Language: Java
+* Repository: <https://github.com/cnnic/rdap>
+
 ## CoCCA RDAP
 
 <https://cocca.org.nz/srs/rdap.html>

@@ -41,6 +41,18 @@
 * Language: Typescript
 * License: Unknown Open Source
 
+### RDAP Explorer
+
+> RDAP Explorer provides a basic frontend for querying, formatting and navigating RDAP information using:
+> 
+> * IPWhois by Philip Hane.
+> * pycountry by Christian Theune
+> * JSONFormatter by Mohsen Azimi.
+
+* Repository: <https://github.com/cdubz/rdap-explorer>
+* Language: Python
+* License: MIT
+
 ### RDAP Web Client
 
 * Repository: <https://github.com/rdap-org/client.rdap.org>

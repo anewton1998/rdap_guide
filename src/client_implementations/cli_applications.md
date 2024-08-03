@@ -3,7 +3,7 @@
 Command-Line Interface (CLI) clients have a heritage that goes back to original WHOIS,
 which was accessed via clients run on Unix systems.
 
-## ICAN RDAP CLI
+## ICANN RDAP CLI
 
 From the GitHub Repository:
 
@@ -24,6 +24,20 @@ From the GitHub Repository:
   * Output Paging
 
 ![ICANN RDAP CLI](icann-rdap-cli.png)
+
+## IPWhois
+
+> ipwhois_cli.py and ipwhois_utils_cli.py are command line interfaces for the ipwhois library. When using pip to install ipwhois, the CLI scripts are installed to your Python environment Scripts directory.
+> 
+> * ipwhois_cli.py has full ipwhois.py functionality.
+> * ipwhois_utils_cli.py has full utils.py functionality.
+> * The others (net.py, rdap.py, whois.py, nir.py, asn.py) will be included in a future release.
+
+* License: BSD 2-Clause
+* Repository: <https://github.com/secynic/ipwhois>
+* Language: Python
+* Operating Systems: MacOS, Linux, Windows
+* Related: [Client Library](libraries.html#ipwhois)
 
 ## NicInfo
 
@@ -83,6 +97,51 @@ From OpenRDAP.org:
   * X.509 client authentication
 
 ![OpenRDAP Querying Google.com](openrdap-google.com.png)
+
+### 20c RDAP
+
+```
+usage: rdap [-h] [--debug] [--home HOME] [--verbose] [--quiet] [--version] [--output-format OUTPUT_FORMAT] [--show-requests] [--parse] [--rir] [--write-bootstrap-data] query [query ...]
+
+rdap
+
+positional arguments:
+  query
+
+options:
+  -h, --help            show this help message and exit
+  --debug               enable extra debug output
+  --home HOME           specify the home directory, by default will check in order: $RDAP_HOME, ./.rdap, /home/grizz/.rdap, /home/grizz/.config/rdap
+  --verbose             enable more verbose output
+  --quiet               no output at all
+  --version             show program's version number and exit
+  --output-format OUTPUT_FORMAT
+                        output format (yaml, json, text)
+  --show-requests       show all requests
+  --parse               parse data into object before display
+  --rir                 display rir
+  --write-bootstrap-data
+                        write bootstrap data for type (as query)  
+```
+
+* Package Information: <https://pypi.org/project/rdap/>
+* Repository: <https://github.com/20c/rdap>
+* License: Apache 2.0
+
+### RDAP Cli
+
+> This program is in charge of collecting all the relevant information related to a domain such as domain expiration date, nameservers, registration entity, domain registration date, if it is available to register or not.
+
+* Package Information: <https://pypi.org/project/rdap-cli/>
+* Repository: <https://github.com/alexeipopov95/rdap-cli>
+* License: GPL 3.0
+
+### RDAP Explorer
+
+> Program focused on retrieving and parsing RDAP data and Geolocation for IPv4 addresses.
+
+* Repository: <https://github.com/stifferdoroskevich/rdap_explorer>
+* License: Unknown
 
 ### RDAP Check
 
