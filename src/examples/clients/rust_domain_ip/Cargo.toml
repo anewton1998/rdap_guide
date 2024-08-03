@@ -1,0 +1,12 @@
+[package]
+name = "rust_domain_ip"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+icann-rdap-client = "0.0.16"
+icann-rdap-common = "0.0.16"
+tokio = { version = "1.35", features = [ "full" ] }
+tokio-macros = { version = "0.2.0-alpha.6" }

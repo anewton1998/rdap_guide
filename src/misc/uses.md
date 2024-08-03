@@ -30,3 +30,4 @@ Writing custom RDAP clients can be quite easy. Here are some examples in this ch
 
 1. [A Bash Shell Example: Finding IP Networks](finding_ip_networks.md) - finding the start, end addresses, and CIDR blocks of public IP networks.
 1. [A Python Example: Finding Protected Domains](finding_protected_domains.md) - list domains that are not protected.
+1. [A Rust Example: Networks of Nameservers](networks_of_nameservers.md) - get the networks of the nameservers of a list of domain names.

@@ -8,8 +8,7 @@
 - [Uses of RDAP](misc/uses.md)
     - [Bash: Finding IP Networks](misc/finding_ip_networks.md)
     - [Python: Finding Protected Domains](misc/finding_protected_domains.md)
-    // TODO scripting examples
-    // rust example to take list of domain names and get the networks of the nameservers
+    - [Rust: Networks of Nameservers](misc/networks_of_nameservers.md)
 - [The Protocol](protocol/README.md)
     - [HTTP](protocol/http.md)
         - [Headers](protocol/headers.md)
