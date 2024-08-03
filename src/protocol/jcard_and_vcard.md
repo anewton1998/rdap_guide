@@ -58,6 +58,7 @@ In practice, registries only use a subset and clients can limit their implementa
 * [role](#role-property)
 * [tel](#tel-property)
 * [title](#title-property)
+* [url](#url-property)
 * [version](#version-property) -- **required**
 
 With the exception of the `version` property, these properties may be repeated more than once and may have
@@ -436,6 +437,27 @@ some registries/registrars do collect this information.
   {},
   "text",             
   "Sanitation Engineer" 
+]
+```
+
+## `url` property
+
+The `url` property specifies a URL associated with the jCard. RFC 6350 does not define these in detail, but
+does note:
+
+> Examples for individuals include personal web sites, blogs, and social networking site identifiers.
+
+While the `url` property can have a media type parameter, one is seldom provided.
+
+This property should not be confused with a [`link`](common_data_structures.md#links), which are often
+used to indicate additional processing by an RDAP client. The `url` property is useful should the jCard
+be extracted and passed on to other applications.
+
+```json
+[ "url", 
+  { "type":"home" },
+  "uri", 
+  "https://example.org"
 ]
 ```
 

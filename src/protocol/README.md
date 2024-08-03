@@ -22,7 +22,7 @@ It defines only the `GET` and `HEAD` HTTP methods, and URL paths are defined as 
 
 This output shows an HTTP GET request of `/domain/example.com` from the client with a 200 OK response from the server.
 The response contains JSON, most of which is directly defined in [RFC 9083](https://datatracker.ietf.org/doc/html/rfc9083).
-The parts not defined in RFC 9083 are [jCard](/misc/glossary.md#jcard) which is a JSON encoding of [vCard](/misc/glossary.md#vcard),
+The parts not defined in RFC 9083 are [jCard](jcard_and_vcard.md) which is a JSON encoding of [vCard](/misc/glossary.md#vcard),
 the standard most users encounter when exchanging contact data (aka business cards) over email.
 
 Breaking down the output, the following is the HTTP request:
@@ -43,46 +43,49 @@ Here, the important parts to note are the media type in the `content-type` heade
 and the `access-control-allow-origin` header, which is used to allow web browsers to run JavaScript sourced from one
 website to use the RDAP content from an RDAP HTTP server.
 
-Next, the JSON returned can be broken down as follows. The first part is the "entity", which is the contact for the domain:
+Next comes the JSON, which has no strict order (because JSON defines none and RDAP enforces none). To help make sense
+of this, the sections of JSON are re-ordered for educational purposes.
+
+The [`rdapConformance` array](common_data_structures.md#rdapconformance) is an RDAP structure containing protocol and extension
+compatibility information. At a minimum, it must contain the string "rdap_level_0". This array shows up in every RDAP response.
+Here, it is lines 98-100:
 
 ```json
-{{#include http_example_com.out:19:49}}    
+{{#include http_example_com.out:98:100}}    
 ```
 
-This is followed by the events, which show the date and time for the major changes to the domain itself:
+Each RDAP response is either a single object (the result of a [lookup](rdap_urls.md#lookups)) or an array of objects
+(the result of a [search](rdap_urls.md#searches)). Every object must have an [`objectClassName`](common_data_structures.md#objectclassname)
+to inform the client which object(s) is in the response. Here it is on line 97:
 
 ```json
-{{#include http_example_com.out:50:59}}    
+{{#include http_example_com.out:97:97}}    
 ```
 
-Next is the domain name itself. This is called `ldhName` where "ldh" is short for "letters, digits, hyphens" referring to
-restriction of DNS names to be ASCII letters, digits or hyphens. There is a separate JSON value for Internationalized Domain Names (IDNs).
+Lines 60 and lines 101 to 106 have information specific to [domain objects](object_classes.md#domain). Line 60 describes the 
+ASCII version of the domain name:
 
 ```json
 {{#include http_example_com.out:60:60}}    
 ```
 
-Next is the link to the domain, used by some clients for caching purposes. Note that the `rel` value is `self`
-and the `type` value is the RDAP media type of `application/rdap+json`.
+While lines 101 to 106 describe the state of the domain:
 
 ```json
-{{#include http_example_com.out:61:68}}    
+{{#include http_example_com.out:101:106}}
 ```
 
-Next are notices from the server operator:
+And this domain object has other information embedded in it using [common data structures](common_data_structures.md) found in
+all the objects classes:
+
+* Lines 19 to 49: [`entities`](object_classes.md#entity-children) or the domain's "contacts".
+* Lines 50 to 59: [`events`](common_data_structures.md#events) such as when the domain was first registered.
+* Lines 61 to 68: [`links`](common_data_structures.md#links) to other information relevant to the domain.
+
+Finally, there are [`notices`](common_data_structures.md#notices-and-remarks) from the server operator (lines 69 to 96):
 
 ```json
 {{#include http_example_com.out:69:96}}    
-```
-
-Next, the following is given:
-1. The type of the object being returned is given. This is used by clients to determine the type of object being returned.
-1. The `rdapConformance` array, which lists the extensions in use by the RDAP server.
-1. The data signifying if `example.com` is signed in the DNS (i.e. DNSSEC).
-1. The status of the domain, which is active.
-
-```json
-{{#include http_example_com.out:97:106}}    
 ```
 
 ## Lookups and Searches
