@@ -31,8 +31,8 @@ Breaking down the output, the following is the HTTP request:
 {{#include http_example_com.out::6}}    
 ```
 
-This is all normal HTTP semantics. The RDAP specific parts are the URL, which has the defined `/domain` path (See [Lookups and Searches](#lookups-and-searches)).
-The other RDAP specific part is the media type of `application/rdap+json` in the `accept` header.
+This is all normal HTTP semantics. The RDAP specific parts are the URL, which has the defined `/domain` path (See [Lookups and Searches](#lookups-and-searches)),
+and the media type of `application/rdap+json` in the `accept` header.
 
 The next section shows the HTTP response.
 
@@ -44,7 +44,7 @@ and the `access-control-allow-origin` header, which is used to allow web browser
 website to use the RDAP content from an RDAP HTTP server.
 
 Next comes the JSON, which has no strict order (because JSON defines none and RDAP enforces none). To help make sense
-of this, the sections of JSON are re-ordered for educational purposes.
+of this, the sections of JSON are re-ordered for illustrative purposes.
 
 The [`rdapConformance` array](common_data_structures.md#rdapconformance) is an RDAP structure containing protocol and extension
 compatibility information. At a minimum, it must contain the string "rdap_level_0". This array shows up in every RDAP response.

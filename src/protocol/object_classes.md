@@ -336,7 +336,7 @@ The following is a contrived [example](ns.json) of a nameserver. Keep in mind th
 
 ## IP Network
 
-The "ip network" object class represents the registration of an IP address block. As not all [INRs](../glossary.md#inr) require
+The "ip network" object class represents the registration of an IP address block. As not all [INRRs](../glossary.md#inrr) require
 registrations on [CIDR](https://datatracker.ietf.org/doc/html/rfc4632) block boundaries, the IP address object defines the
 registration with a `startAddress` and `endAddress`.
 

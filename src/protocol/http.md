@@ -59,7 +59,7 @@ Practically speaking, this means clients must support both TLS 1.2 and TLS 1.3.
 Even with TLS 1.3, there are a few precautions both clients and servers should take.
 
 1. Servers should abort a handshake when the server name in the SNI does not match. Clients should do the same unless explicitly commanded to ignore the mismatch by the user.
-2. Clients and servers should abort a handshake when there is not agreed upon protocol in the ALPN.
+2. Clients and servers should abort a handshake when there is no agreed upon protocol in the ALPN.
 3. Servers should use key sizes no smaller than the following:
    1. DH - 2048 bits
    2. ECDH - 224 bits
@@ -95,7 +95,7 @@ of TLSA with HTTP as it has done with [SMTP](https://datatracker.ietf.org/doc/ht
 HTTP using protocols have a series of challenges for which TLSA is not ideal. Though not yet a standard, [RFC 9102](https://datatracker.ietf.org/doc/html/rfc9102)
 describes an experimental feature of TLS to use DANE without TLSA.
 
-Should an RDAP service wish to use TLSA, the following suggests are made in the absence of any other HTTP or RDAP specific
+Should an RDAP service wish to use TLSA, the following suggestions are made in the absence of any other HTTP or RDAP specific
 TLSA guidelines:
 * Certificate usage should be 3 (DANE-EE) which identifies the certificate in use by the RDAP server.
 * Selector should be 1 (SPKI) which ties the TLSA record to the Subject Public Key Identifier of the 

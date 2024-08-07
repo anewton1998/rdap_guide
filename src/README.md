@@ -40,7 +40,7 @@ involved in the efforts of implementing RDAP clients and servers.
 
 This book is a living document and is updated on an as-needed basis.
 
-This version built on {{CURRENT_BUILD_TIME}}.
+The version you are reading was built on {{CURRENT_BUILD_TIME}}.
 
 ## Contributing
 

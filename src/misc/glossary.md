@@ -28,15 +28,30 @@ The [Internet Assigned Numbers Authority](https://www.iana.org/) is responsible 
 from the pools of these resources created by the [IETF](#ietf), managing the root DNS zones, and managing the registries of protocol elements for the [IETF](#ietf)
 and other organizations.
 
+### ICANN
+
+The Internet Corporation for Assigned Names and Numbers a multi-stakeholder coordination body for [ccTLDs](#cctld), [gTLDs](#gtld), and [RIRs](#rir).
+
 ### IETF
 
 The [Internet Engineering Task Force](https://ietf.org), or IETF, is one of the main standards setting organizations for Internet standards and is 
 the Standards Developing Organization (SDO) which defined RDAP.
 
-### INR
+### INR (disambiguation)
 
-An Internet Number Registry is a registry assigning IP addresses and Autonomous System numbers (ASNs) to other organizations within a defined service area.
-INRs are composed of [RIRs](#rir) but also Local Internet Registries (LIRs) and National Internet Registries (NIRs).
+#### Internet Number Resource
+
+An Internet Number Resource is either an IP network (bounded by a start and end IP address and sometimes expressed using [CIDR](https://datatracker.ietf.org/doc/html/rfc4632))
+or an Autonomous System Number (ASN).
+
+#### Internet Number Registry
+
+"Internet Number Registry", see [Internet Number Resource Registry](#inrr).
+
+### INRR
+
+An Internet Number Resource Registry is a registry assigning IP addresses and Autonomous System numbers (ASNs) to other organizations within a defined service area.
+INRRs are composed of [RIRs](#rir) but also Local Internet Registries (LIRs) and National Internet Registries (NIRs).
 
 ### jCard
 
