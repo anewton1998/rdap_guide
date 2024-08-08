@@ -13,11 +13,12 @@ type "application/rdap+json".
 {
   "value" : "https://registry.example/domain/foo.example",
   "rel"   : "related",
+  "type"  : "application/rdap+json",
   "href"  : "https://registrar.example/domain/foo.example"
 }
 ```
 
-The [ICANN Response Profile] specifies that these referrals be made using
+The [ICANN Response Profile](../specifications/icann.md) specifies that these referrals be made using
 the `related` relationship type.
 
 The soon-to-be [RIR Search](https://datatracker.ietf.org/doc/html/draft-ietf-regext-rdap-rir-search-09#name-link-relations)
