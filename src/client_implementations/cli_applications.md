@@ -37,7 +37,16 @@ From the GitHub Repository:
 * Repository: <https://github.com/secynic/ipwhois>
 * Language: Python
 * Operating Systems: MacOS, Linux, Windows
-* Related: [Client Library](libraries.html#ipwhois)
+  Related: [Client Library](libraries.html#ipwhois)
+
+## jrdap
+
+> jrdap is a command-line RDAP client written in JavaScript. It has no dependencies beyond node.js.
+
+* License: BSD 3-Clause
+* Repository: <https://github.com/gbxyz/jrdap>
+* Language: Javascript
+* Operating Systems: MacOs, Linux, Windows
 
 ## NicInfo
 
