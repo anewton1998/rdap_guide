@@ -33,7 +33,7 @@ It is also not intended as a replacement for the RFCs and other specifications g
 RDAP. However, it is intended to offer clearer text, more complete context, and more
 examples than one might find in the other sources. Additionally, this book will cover
 background, the ecosystem, and popular conventions that are not well documented in other
-places. This should aid developers and others
+places. This should aid users, developers and others
 involved in the efforts of implementing RDAP clients and servers.
 
 ## Version

@@ -23,7 +23,7 @@ may be, they are not "authoritative" for second and third level domain registrie
 between [RIRs](../glossary.md#rir), number resources of [NIRs](../glossary.md#nir) and [LIRs](../glossary.md#lir), and domain contacts of "thin" TLDs
 where the information resides solely at a domain registrar.
 
-## The Boostrap Files
+## The Bootstrap Files
 
 Bootstrapping starts with one of 5 IANA files, depending on the information being sought.
 

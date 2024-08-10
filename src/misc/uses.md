@@ -29,7 +29,7 @@ and not an authoritative server, [reports](https://mailarchive.ietf.org/arch/msg
 daily query rates of 10 million (approximately 300 million per month).
 
 In terms of web traffic, any websites pulling in 300 million monthly hits would be in the top 50 of the world.
-If RDAP was pulling in anywhere close to this many eyeballs, we would all know it.
+If RDAP was pulling in anywhere close to this many "eyeballs", we would all know it.
 
 Therefore, these queries are from "bots" or more plainly said, scripts. This is stated in [RFC 7480, Section 3](https://datatracker.ietf.org/doc/html/rfc7480#section-1):
 
