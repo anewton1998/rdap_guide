@@ -96,25 +96,23 @@ Each query is specified by a unique path.
 
 [RFC 9082](https://datatracker.ietf.org/doc/html/rfc9082) defines six types of lookups:
 
-* `/ip` - lookups of IP addresses (either individual addresses or IP CIDR blocks).
-* `/autnum` - lookups of Autonomous System numbers.
-* `/domain` - lookups of domain registrations.
-* `/nameserver` - lookups of DNS nameserver registrations.
-* `/entity` - lookups of entities (aka contacts).
-* `/help` - lookup of server help information.
+| Path | Lookup |
+| ---- | ------ |
+| `/ip` | [Lookups of IP addresses (either individual addresses or IP CIDR blocks).](rdap_urls.md#ip-and-cidr-lookups) |
+| `/autnum` | [Lookups of Autonomous System numbers.](rdap_urls.md#asn-lookups) |
+| `/domain` | [Lookups of domain registrations.](rdap_urls.md#domain-lookups) |
+| `/nameserver` | [Lookups of DNS nameserver registrations.](rdap_urls.md#nameserver-lookups) |
+| `/entity` | [Lookups of entities (aka contacts).](rdap_urls.md#entity-lookups) |
+| `/help` | [Lookup of server help information.](rdap_urls.md#server-help) |
 
 RFC 9082 defines the following searches:
 
-* domain searches
-  * `/domains?name=<DOMAIN SEARCH PATTERN>` - searches for domain registrations by a domain name search pattern.
-  * `/domains?nsLdhName=<NAMESERVER SEARCH PATTERN>` - searches for domain registrations by a nameserver host name search pattern of a domain.
-  * `/domains?nsIp=<NAMESERVER IP ADDRESS>` - searches for domain registrations by a nameserver IP address of a domain.
-* nameserver searches
-  * `/nameservers?name=<NAMESERVER SEARCH PATTERN>` - searches for nameserver objects by a hostname search pattern.
-  * `/nameservers?ip=<NAMESERVER IP ADDRESS>` - searches for nameserver objects by a nameserver IP address.
-* entity searches
-  * `/entities?fn=<ENTITY NAME SEARCH PATTERN>` - searches for entities by a name pattern.
-  * `/entities?handle=<ENTITY HANDLE SEARCH PATTERN>` - searches for entities by a handle pattern.
+| Path | Search |
+| ---- | ------ |
+| `/domains` | [Search for domains by name, nameserver name, or nameserver IP.](rdap_urls.md#domain-searches) |
+| `/nameservers` | [Search for nameserver by name or IP.](rdap_urls.md#nameserver-searches) |
+| `/entities` | [Search for entities (aka contacts) by name or handle.](rdap_urls.md#entity-searches) |
 
-  These are the core queries defined by RDAP. However, RDAP has an extension mechanism that allows for other
-  lookups and searches to be defined.
+These are the core queries defined by RDAP. However, RDAP has an [extension mechanism](extensions.md) that allows for other
+lookups and searches to be defined.
+
