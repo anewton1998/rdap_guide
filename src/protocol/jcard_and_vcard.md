@@ -366,7 +366,7 @@ entity to the resource (i.e. domain, IP network).
 ## `tel` Property
 
 The `tel` property represents a telephone number, and its value can be either free-form text
-expressing the telphone number or a tel URI.
+expressing the telephone number or a tel URI.
 
 
 ```json
@@ -386,6 +386,12 @@ expressing the telphone number or a tel URI.
   "tel:+18005551212" // must follow tel URI format
 ]
 ```
+
+The `tel` URI format is defined in [RFC 3966](https://datatracker.ietf.org/doc/html/rfc3966), which
+fall into two basic categories: global numbers and local numbers. In summary, global numbers are
+signified by a starting `+` character and part of the E.123 / E.164 specification (e.g. "+18005551212")
+of international phone numbers; local numbers are part of a private numbering plan and must be
+tagged with a phone context (e.g. "123;phone-context=example.com").
 
 ### `tel` Property - `type` Parameter
 

@@ -15,6 +15,16 @@ and extensions.
   * gTLD registrar (February 2024 gTLD RDAP profile)
   * RIR (January 2021 NRO RDAP Profile)
 
+### WebRDAPct
+
+* Service: <https://webrdapct.icann.org>
+* Related: [Software](#icann-rdap-conformance-tool)
+* Validations:
+  * Standard IETF RFCs
+  * gTLD Registry (thin or thick)
+  * gTLD Registrar
+  * ICANN gTLD Profile February 2019
+
 ## Software
 
 ### APNIC RDAP Conformance

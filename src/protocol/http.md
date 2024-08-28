@@ -65,6 +65,14 @@ Even with TLS 1.3, there are a few precautions both clients and servers should t
    2. ECDH - 224 bits
    3. RSA - 2048 bits w/ SHA-256
 
+As for TLS 1.2, [RFC 9325](https://datatracker.ietf.org/doc/html/rfc9325#name-cipher-suites-for-tls-12)
+only recommends the usage of these cipher suites:
+
+* TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+* TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+* TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+
 ### TLS 1.3 Early Data
 
 TLS 1.3 has a feature known as "Early Data" or zero round-trip time (0-RTT). How this feature is used
