@@ -53,6 +53,8 @@ respond at all.
 +----------------+                                             +----------------+
 ```
 
+Usage of the [Retry-After](headers.md#retry-after-header) header is recommended when using 429 responses.
+
 ## Redirects
 
 There are many cases in which an RDAP server returns a redirect, especially the [RIRs](../misc/glossary.md#rir).

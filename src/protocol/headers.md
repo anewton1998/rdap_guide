@@ -51,3 +51,14 @@ Also, not explicitly stated in any of the RDAP specifications, it is recommended
 because many RDAP servers for ccTLDs and gTLDs server more than one TLD. The `host` header is sometimes used by RDAP servers to
 route requests to the correct back-end service. This is especially helpful to servers when responding to a `/help` request as
 there is nothing the URL of the request that may be used for request routing.
+
+## Retry-After Header
+
+The Retry-After header specifies either a specific date/time or a delay in seconds to attempt to send another query.
+Servers should use this header when issuing HTTP 429 responses to instruct clients when to attempt another retry. Without
+this header, clients cannot easily determine the amount of time necessary to retry a query and often resort to
+unspecified algorithms, which in the simple case is to retry repeatedly until an answer is received. The most
+common usage of the Retry-After header is to specify the number of seconds a client should wait:
+
+    retry-after: 120
+
