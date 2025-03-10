@@ -31,6 +31,8 @@ place on in-browser applications. [RFC 7480](https://datatracker.ietf.org/doc/ht
 
     access-control-allow-origin: *
 
+Use of this header is "RECOMMENDED" but the use of the `access-control-allow-credentials` header is "NOT RECOMMENDED".
+
 The [ICANN gTLD specifications](/specifications/icann.md) mandate the usage of this header.
 
 ## HTTP Strict Transport Security (HSTS) Header
