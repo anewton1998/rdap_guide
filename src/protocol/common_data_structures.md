@@ -76,6 +76,17 @@ is not formally defined in the RDAP specifications though in practice they are t
 this way, such as when a domain registry provides links to a domain registration in a domain
 registrar.
 
+With regard to `hreflang`, [RFC 8288](https://datatracker.ietf.org/doc/html/rfc8288) does not clearly describe it as a single
+string or an array of strings. Therefore, implementers should be prepared to handle both situations:
+
+```json
+"hreflang" : [ "fr" ],
+
+// or
+
+"hreflang" : "fr"
+```
+
 ## Notices and Remarks
 
 The `notices` and `remarks` arrays are identical except for their names. The difference between
