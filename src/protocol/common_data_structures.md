@@ -66,7 +66,7 @@ must contain other than it is a URI and somehow relevant to either the object or
 in which it is found.
 
 The `rel` property can only have values found in the [IANA Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml)
-protocol parameter registry.
+protocol parameter registry. Implementers should note that these values are case-insensitive according to [RFC 8288](https://datatracker.ietf.org/doc/html/rfc8288).
 
 Though not required, the `type` property indicates to clients the type of data to be
 found when the link, that is the value of `href`, is followed -- especially for HTTP/HTTPS
