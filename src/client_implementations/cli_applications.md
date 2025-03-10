@@ -181,3 +181,5 @@ options:
 * Documentation: <https://metacpan.org/pod/App::rdapper>
 * License: Unknown Open Source
 * Related: [Client Library](libraries.md#netrdap)
+
+![rdapper](rdapper.png)
