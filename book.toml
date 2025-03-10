@@ -24,6 +24,6 @@ other_variabled_not_in_env= "value"
 
 [output.html]
 additional-js = ["mermaid.min.js", "mermaid-init.js"]
-default-theme = "ayu"
+default-theme = "rust"
 git-repository-url = "https://github.com/anewton1998/rdap_guide"
 edit-url-template = "https://github.com/anewton1998/rdap_guide/edit/main/{path}"
