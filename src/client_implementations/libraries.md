@@ -91,7 +91,7 @@ language.
 * Repository: <https://github.com/gbxyz/perl-net-rdap>
 * Documentation: <https://metacpan.org/pod/Net%3A%3ARDAP>
 * License: Unknown Open Source
-* Related: [CLI Application](cli_applications.md#rdapper)
+* Related: [CLI Application](cli_applications.md#rdapper), [Server](../server_implementations/authoritative.md#netrdapserver)
 
 ## PHP
 

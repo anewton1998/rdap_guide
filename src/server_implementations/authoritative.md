@@ -65,6 +65,15 @@
 * Language: PHP
 * Related: [Authoritative Server](#namingo-registry)
 
+## Net::RDAP::Server
+
+> Net::RDAP::Server implements a simple framework for creating RDAP servers.
+> RDAP is the Registration Data Access Protocol, which is specified in IETF STD 95.
+
+* License: Perl 5
+* Repository: <https://github.com/gbxyz/perl-net-rdap>
+* Language: Perl
+* Related: [CLI Application](../client_implementations/cli_applications.md#rdapper), [Library](../client_implementations/libraries.md#netrdap)
 
 ## Nomulus
 

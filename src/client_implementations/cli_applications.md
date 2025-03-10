@@ -180,6 +180,6 @@ options:
 * Repository: <https://github.com/gbxyz/rdapper>
 * Documentation: <https://metacpan.org/pod/App::rdapper>
 * License: Unknown Open Source
-* Related: [Client Library](libraries.md#netrdap)
+* Related: [Client Library](libraries.md#netrdap), [Server](../server_implementations/authoritative.md#netrdapserver)
 
 ![rdapper](rdapper.png)
