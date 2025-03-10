@@ -233,7 +233,7 @@ is purposely defined for use in RDAP.
 
 ```json
 [
-  "contact-uri"
+  "contact-uri",
   {},
   "uri",
   "https://example.com/contact-form"
@@ -244,7 +244,7 @@ This may be either an http, https, or mailto URI.
 
 ```json
 [ 
-  "contact-uri"
+  "contact-uri",
   {},
   "uri",
   "mailto:contact@example.com"
@@ -257,7 +257,7 @@ The `email` property has a text value that is an email address.
 
 ```json
 [ 
-  "email"
+  "email",
   {},
   "text",
   "contact@example.com"
@@ -270,7 +270,7 @@ Like the `adr` property, the `email` property may also have a `type` parameter t
 
 ```json
 [ 
-  "email"
+  "email",
   { "type": "work" },   // can be either "work" or "home"
   "text",
   "contact@example.com"
@@ -284,7 +284,7 @@ in jCard because, theoretically, jCard/vCard processors use this information as 
 
 ```json
 [ 
-  "fn"
+  "fn",
   {},
   "text",
   "Alice Allison"
@@ -296,7 +296,7 @@ those cases, the value of the `fn` property should be an empty string.
 
 ```json
 [ 
-  "fn"
+  "fn",
   {},
   "text",
   ""      // EMPTY STRING
@@ -310,7 +310,7 @@ many values, but in practice it is either "individual", "org", or "group".
 
 ```json
 [ 
-  "kind"
+  "kind",
   {},
   "text",
   "individual"  // "org", "individual", or "group"
@@ -326,7 +326,7 @@ The `lang` property specifies the language of the contact.
 
 ```json
 [ 
-  "lang"
+  "lang",
   {},
   "language-tag",
   "fr" 
@@ -339,7 +339,7 @@ The `org` property represents the name of the organization to which an individua
 
 ```json
 [ 
-  "org"
+  "org",
   {},
   "text",
   "Acme Rockets, LTD" 
@@ -352,7 +352,7 @@ The `role` property represents the role of an individual within an organization 
 
 ```json
 [ 
-  "role"
+  "role",
   {},
   "text",
   "Coffee Fetcher" 
@@ -371,7 +371,7 @@ expressing the telephone number or a tel URI.
 
 ```json
 [ 
-  "tel"
+  "tel",
   {},
   "text",             // note: type of "text"
   "1 (800) 555-1212" 
@@ -380,7 +380,7 @@ expressing the telephone number or a tel URI.
 
 ```json
 [ 
-  "tel"
+  "tel",
   {},
   "uri",             // note: type of "uri"
   "tel:+18005551212" // must follow tel URI format
@@ -408,7 +408,7 @@ the set of values describing the capabilities of the phone in addition to the va
 
 ```json
 [ 
-  "tel"
+  "tel",
   {
     "type" : "voice"
   },
@@ -421,7 +421,7 @@ When multiple types are needed, then an array of strings is used:
 
 ```json
 [ 
-  "tel"
+  "tel",
   {
     "type" : [ "voice", "text", "work" ]
   },
@@ -439,7 +439,7 @@ some registries/registrars do collect this information.
 
 ```json
 [ 
-  "title"
+  "title",
   {},
   "text",             
   "Sanitation Engineer" 
@@ -475,7 +475,7 @@ the "vCard" array.
 
 ```json
 [ 
-  "version"
+  "version",
   {},
   "text",             
   "4.0" 
