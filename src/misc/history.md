@@ -18,8 +18,8 @@ all [registries and registrars were to deploy RDAP.](https://www.icann.org/resou
 As of 2024, all 5 [RIRs](/misc/glossary.md#rir) have deployed RDAP, all [gTLDs](/misc/glossary.md#gtld) have deployed RDAP,
 and 25% of [ccTLDs](/misc/glossary.md#cctld) have deployed RDAP according to the [RDAP Deployment Dashboard](https://deployment.rdap.org/).
 
-![2024 RDAP Deployment according to rdap.org](rdap_org_dashboard_2024.png)
-*2024 RDAP deployment according to rdap.org*
+![2025 RDAP Deployment according to rdap.org](rdap_org_dashboard_2025.png)
+*2025 RDAP deployment according to rdap.org*
 
 ## The Before Time
 
