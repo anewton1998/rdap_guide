@@ -384,8 +384,8 @@ It has the following structures:
 |-----------------|----------------------------------------------------------------------------------------------------------|
 |`objectClassName`|(**REQUIRED**) must be "autnum". See [`objectClassName`](common_data_structures.md#objectclassname).      |
 |`handle`         |a registry-unique string identifier. See [`handle`](json.md#handle).                                      |
-|`startAutnum`    |a string containing the starting ASN.                                                                     |
-|`endAutnum`      |a string containing the ending ASN.                                                                       |
+|`startAutnum`    |a number containing the starting ASN.                                                                     |
+|`endAutnum`      |a number containing the ending ASN.                                                                       |
 |`name`           |a name for the registration usually given by the registration holder.                                     |
 |`type`           |a string containing an [RIR](../misc/glossary.md#rir) classification of the registration.                 |
 |`country`        |a string with the ISO 3166-2 Alpha2 country code where the network originates traffic.                    |
