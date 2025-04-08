@@ -216,7 +216,7 @@ This is a simple string name "lang", and it contains a language identifier.
 The format for language identifiers is defined in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)
 which can look like "en" (for English) or "de-AT" for German used in Austria or combinations
 of language, script, region and variant subtags that are found in the
-[IANA Language Subtag Registry](https://www.iana.org/assignments/lang-subtags-templates/lang-subtags-templates.xhtml).
+[IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry).
 
 The format can get very complicated but in practice is usually just a language subtag, such as "en", or
 a language subtag followed by a region subtag, such as "en-US".
