@@ -11,5 +11,5 @@ The latest versions of these documents were published in February 2024 for imple
 
 Previous to the 2024 requirements, ICANN had the 2019 requirements:
 * [RDAP Technical Implementation Guide](https://www.icann.org/en/system/files/files/rdap-technical-implementation-guide-15feb19-en.pdf)
-* [RDAP Response Profile](https://www.icann.org/en/system/files/files/rdap-technical-implementation-guide-15feb19-en.pdf)
+* [RDAP Response Profile](https://www.icann.org/en/system/files/files/rdap-response-profile-15feb19-en.pdf)
 
