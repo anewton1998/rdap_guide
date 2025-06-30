@@ -1,7 +1,7 @@
 # Common Data Structures
 
 The common data structures are simply definitions of JSON that are commonly found
-in the [object classes](protocol/object_classes.md). These are:
+in the [object classes](object_classes.md). These are:
 
 * [`rdapConformance`](#rdapconformance)
 * [`links`](#links)
