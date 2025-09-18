@@ -24,6 +24,14 @@
 
 <https://lookup.icann.org/en>
 
+### isTrust
+
+A Web browser extension for Chrome, Safari, Edge, and Firefox.
+
+<https://istrust.org/>
+
+* Repository: <https://github.com/Internet-Society-Belgium/isTrust>
+
 ### LACNIC RDAP Web Client
 
 <https://rdap-web.lacnic.net/>
