@@ -16,6 +16,6 @@ cargo install mdbook-variables
 cargo install mdbook-svgbob2
 ~~~
 
-Build the book with `CURRENT_BUILD_DATE=$(date) mdbook build`.
+Build the book with `CURRENT_BUILD_TIME=$(date) mdbook build`.
 
 More information on mdbook can be found [here](https://rust-lang.github.io/mdBook/index.html).
