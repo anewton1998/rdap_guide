@@ -32,6 +32,12 @@
 
 <https://rdap.dev/>
 
+### RDAPtastic
+
+<http://rdaptastic.com/>
+
+* Related: [Mobile Application](./mobile_applications.md#rdaptastic)
+
 ## Software
 
 ### RDAP Lookup Client

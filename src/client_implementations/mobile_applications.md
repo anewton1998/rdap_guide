@@ -25,3 +25,9 @@
 * Application Information: 
   * <https://apps.apple.com/us/app/rdap-browser/id1473692572?platform=ipad>
   * <https://apps.apple.com/us/app/rdap-browser/id1473692572?platform=iphone>
+
+### RDAPtastic
+
+<https://testflight.apple.com/join/4nQ59YyR>
+
+* Related: [Web Application](./web_applications.md#rdaptastic)
