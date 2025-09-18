@@ -58,6 +58,10 @@ language.
 * Documentation: <https://extensions.rapid7.com/extension/rdap#Documentation-Setup>
 * License: MIT
 
+### Rebol-RDAP
+
+* Repository: <https://github.com/Oldes/Rebol-RDAP>
+
 ### Splunkbase
 
 * Package Information: <https://splunkbase.splunk.com/app/5945>
