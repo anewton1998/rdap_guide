@@ -27,10 +27,11 @@ ARIN, just one of the 5 [RIRs](/misc/glossary.md#rir),
 upwards of 700 million queries per month. And <https://rdap.org>, which is a redirect service
 and not an authoritative server, [reports](https://mailarchive.ietf.org/arch/msg/regext/ElTMpcFDeZ_L43U9UbKqaBowjak/)
 daily query rates of 10 million (approximately 300 million per month).
-Finally, according to ICANN as of December 2024 the gTLD registries report a monthly query rate of 8 billion.
+According to ICANN as of September 2025 the gTLD registries report a monthly query rate of 600 million.
+Therefore, it is likely there are over 1 billion queries per month across the RDAP ecosystem.
 
 In terms of web traffic, any websites pulling in 300 million monthly hits would be in the top 50 of the world, and
-8 billion human interactions for anything would get a lot of attention from enterprising advertisers or others with
+1 billion human interactions for anything would get a lot of attention from enterprising advertisers or others with
 monetization efforts.
 If RDAP was pulling in anywhere close to this many "eyeballs", we would all know it.
 
