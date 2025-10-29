@@ -36,6 +36,10 @@ A Web browser extension for Chrome, Safari, Edge, and Firefox.
 
 <https://rdap-web.lacnic.net/>
 
+### RDAP.ai
+
+<https://rdap.ai>
+
 ### RDAP.Dev
 
 <https://rdap.dev/>
