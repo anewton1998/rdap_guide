@@ -29,7 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MDBOOK_VERSION: 0.4.40
+      MDBOOK_VERSION: 0.4.52
       MERMAID_VERSION: 0.16.2
       VARIABLES_VERSION: 0.3.0
       SVGBOB2_VERSION: 0.3.0
