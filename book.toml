@@ -1,7 +1,6 @@
 [book]
 authors = ["Andy Newton"]
 language = "en"
-multilingual = false
 src = "src"
 title = "A Guide to the Registration Data Access Protocol (RDAP)"
 description = "This book describes the Registration Data Access Protocol, how it works, its ecosystem, and the history behind it."

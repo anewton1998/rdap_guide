@@ -234,6 +234,10 @@ a [remark or notice](#notices-and-remarks).
 The status array contains a list of strings, each with a value that must come from the
 [IANA RDAP JSON Values Registry](https://www.iana.org/assignments/rdap-json-values/rdap-json-values.xhtml).
 
+```json
+"status" : [ "active", "locked" ]
+```
+
 [RFC8056](https://datatracker.ietf.org/doc/html/rfc8056) defines the mapping of RDAP status values from EPP status values. This is
 useful when attempting to properly determine the status of a domain name under TLDs that use EPP (all of the gTLDs and many of the ccTLDs).
 It should be noted that an active domain registration in a TLD using EPP may have a status of "active" but may also have a status of with one
@@ -253,9 +257,29 @@ of the following status values without "active" (that is, these values also mean
 * server update prohibited
 * server transfer prohibited
 
-```json
-"status" : [ "active", "locked" ]
-```
+This is described in [Section 2.3 of RFC5731](https://datatracker.ietf.org/doc/html/rfc5731#section-2.3), translated here into the following rules
+of RDAP status values for EPP using registries: 
+
+* "active" MUST NOT be combined with any other status.
+* "pending delete" MUST NOT be combined with:
+  * "client delete prohibited"
+  * "server delete prohibited"
+* "pending renew" MUST NOT be combined with:
+  * "client renew prohibited"
+  * server renew prohibited"
+* "pending transfer" MUST NOT be combined with:
+  * "client transfer prohibited"
+  * "server transfer prohibited".
+* "pending update" MUST NOT be combined with:
+  * "client update prohibited"
+  * "server update prohibited".
+* The following MUST NOT be combined with each other:
+  * "pending create"
+  * "pending delete"
+  * "pending renew"
+  * "pending transfer"
+  * "pending update"
+* Other status combinations not expressly prohibited MAY be used.
 
 ## Port 43 Whois Server {#port43}
 
