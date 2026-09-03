@@ -15,7 +15,7 @@ used interchangeably.
 
 ## Base URLs
 
-RDAP defines URLs starting with a base URL. This is, a server operator defines a base URL such as
+RDAP defines URLs starting with a base URL. That is, a server operator defines a base URL such as
 `https://foo.example/` or `https://bar.example/v1` or `https://baz.example/rdap` and the clients know
 that queries can be appended to these URLs.
 
@@ -147,7 +147,7 @@ Entity searches use the `/entities` path with the following query parameters:
 * `/entities?handle=<ENTITY HANDLE SEARCH PATTERN>` - searches for entities by a handle pattern.
 
 Like the search patterns above, the `<ENTITY NAME SEARCH PATTERN>` and the `<ENTITY HANDLE SEARCH PATTERN>` are partial string
-searches. The only difference is that these are searches are not bounded by domain labels.
+searches. The only difference is that these searches are not bounded by domain labels.
 
 The expected response to an entity search query is an [entitySearchResult](search_responses.md#entity-search-results).
 

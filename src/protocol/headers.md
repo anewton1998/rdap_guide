@@ -1,6 +1,6 @@
 # Headers
 
-As RDAP uses HTTP and therefore any of the headers used by HTTP may be applicable. However, there are a few that are mandatory to
+As RDAP uses HTTP any of the headers used by HTTP may be applicable. However, there are a few that are mandatory to
 use and others that are suggested to use. Implementers should be aware that HTTP header names are often capitalized (e.g. `User-Agent`)
 but in reality they are case-insensitive.
 

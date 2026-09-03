@@ -47,12 +47,12 @@ identified by a "handle".
 
 Date and time values in RDAP are expressed using [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339)
 format, which is a simplified profile of ISO 8601 date and time. Therefore,
-if an RFC 3339 specific library is not available, then an ISO 8601 can be used
+if an RFC 3339 specific library is not available, then an ISO 8601 library can be used
 for parsing and, with some wrapping, serializing.
 
 Here are some examples:
 
-* `1990-12-31T23:59:59Z` - 31st of December 1990, at 1 second before midnight.
+* `1990-12-31T23:59:59Z` - 31st of December 1990, at 1 second before midnight UTC.
 * `1990-12-31T23:59:60Z` - a leap second at the end of 1990.
 * `1996-12-19T16:39:57-08:00` - a date and time offset from UTC by -8 hours.
 

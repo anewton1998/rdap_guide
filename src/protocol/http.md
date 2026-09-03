@@ -50,8 +50,8 @@ Since 2021, the [IETF has deprecated versions of TLS below 1.2](https://www.rfc-
 (i.e. SSLv1, SSLv2, SSLv3, TLS 1.0 and TLS 1.1). According to [RFC 9325](https://datatracker.ietf.org/doc/html/rfc9325),
 both servers and clients MUST NOT negotiate a downgrade to these protocols.
 
-[RFC 9325](https://datatracker.ietf.org/doc/html/rfc9325) also lists a number of issues server operators
-must take when using TLS 1.2. As these issues are not present with TLS 1.3, it makes more sense for
+[RFC 9325](https://datatracker.ietf.org/doc/html/rfc9325) also lists a number of matters server operators
+must take into consideration when using TLS 1.2. As these issues are not present with TLS 1.3, it makes more sense for
 most server operators to only support TLS 1.3.
 
 Practically speaking, this means clients must support both TLS 1.2 and TLS 1.3.
