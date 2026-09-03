@@ -30,6 +30,33 @@
 * Repository: Unknown
 * Language: Java
 
+## go-rdap-server
+
+> go-rdap-server is an open-source, production-oriented RDAP server written in Go, designed for registry and registrar deployments.
+
+* PostgreSQL, MySQL, and in-memory storage
+* Registrar and registry operator modes
+* Built-in browser-based RDAP lookup web UI (demo HERE)
+* RFC 9082/9083 (STD 95) support
+* IDN, DNSSEC, jCard/vCard support
+* Optional RFC 9560 OAuth 2.0 / OIDC authentication
+* Configurable RDAP extensions
+* Optional legacy WHOIS gateway for migration scenarios
+* Trusted-proxy-aware rate limiting
+* Snapshot-consistent domain aggregate reads
+* Search disabled by default for reduced abuse/DoS exposure
+* Docker/OCI images and release binaries
+
+The project runs the official ICANN RDAP Conformance Tool in CI.
+
+2024 gTLD Registrar profile: 78 groups / 0 errors.
+
+The conformance test is run automatically on pushes/PRs so regressions fail CI.
+
+* Repository: https://github.com/tespio/go-rdap-server
+* Language: Go
+* License: MIT
+
 ## ICANN RDAP Server
 
 > This server was created to aid in the development of the ICANN RDAP Command Line Interface client.
