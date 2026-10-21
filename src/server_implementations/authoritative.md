@@ -30,6 +30,14 @@
 * Repository: Unknown
 * Language: Java
 
+## FRED RDAP server
+
+> The FRED RDAP server is an open-source  Django application which provides RDAP interface to the FRED registry system.
+
+* License: GPLv3
+* Repository: <https://gitlab.nic.cz/fred/rdap>
+* Language: Python
+
 ## go-rdap-server
 
 > go-rdap-server is an open-source, production-oriented RDAP server written in Go, designed for registry and registrar deployments.
